@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.nav-txt {
+  // font-family: sans-serif;
+}
+
+.clicker-box-wrapper {
+  background-image: url("https://images.unsplash.com/photo-1526638862469-011f7a3d94b3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80");
+  // background-image: url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80");
+  // background-image: url("https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1782&q=80");
+  // background-image: url("https://images.unsplash.com/photo-1533119408463-b0f487583ff6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80");
+  background-size: cover;
+  width: 100%;
+  height: 40vh;
+  font-size: 0.8rem;
+}
+
+.clicker-box {
+  width: 100%;
+  background-image: linear-gradient(180deg, #002c11e3 0%, #002c1600 80%);
+  font-size: 1.2rem;
+
+  // .counter-wrapper {
+  // }
+  
+  .click-btn {
+    width: calc(60px + 15vmin);
+    height: calc(60px + 15vmin);
+    font-size: 30px;
+  }
+
+  .trees-per-click {
+    margin-top: -15px;
+    font-size: 1.1rem
+  }
+}
+
+.tree-icon {
+width: 13px;
+}
+
+.nav-icon {
+  width: 20px;
+  padding-top: 22px;
+}
+
+.click-icon {
+width: calc(30px + 10vmin);
+}
+
+.shop-container {
+
+  .item-main {
+    margin: 10px
+  }
+
+}
+
+  .item-img, .achivmt-img  {
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+    min-height: 60px;
+    min-width: 60px;
+    border: 4px solid #ADE194;
+    border: 4px solid #80D261;
+    border-radius: 150px;
+  }
+
+
+
+
+
+@media (min-width: 600px) {
+  .home-container, .shop-container, .achieve-container {
+    // display: flex;
+    // flex: 7;
+    // min-height: 100vh; 
+    width: 70%;
+    justify-self: center;
+  }
+
+  .clicker-box-wrapper {
+    // display: flex;
+    // flex: 3;
+    position: fixed;
+    width: 30%;
+    min-height: 100vh; 
+    
+    .clicker-box {
+      min-height: 100vh; 
+    }
+    
+    .counter-wrapper {
+      font-size: 1.4rem;
+    }
+  
+  }
+}

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+    "require": 1,
+    "description": "Congratulations!! You've just planted your 1st tree.",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 2,
+    "name": "Item 2!",
+    "require": 100,
+    "description": "Congratulations!! You've just planted your 1st tree.",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 3,
+    "name": "Item 3",
+    "require": 500,
+    "description": "NAnananananann asd sd Congratulations!! You've just hired your 1st helper.",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 4,
+    "name": "Item 4",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 5,
+    "name": "Item 5",
+    "require": 2000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 6,
+    "name": "Item 6",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 7,
+    "name": "Item 4",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 8,
+    "name": "Item 5",
+    "require": 2000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "true"
+  },
+  {
+    "id": 9,
+    "name": "Item 6",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "false"
+  },
+  {
+    "id": 10,
+    "name": "Item 6",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "false"
+  },
+  {
+    "id": 11,
+    "name": "Item 4",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "false"
+  },
+  {
+    "id": 12,
+    "name": "Item 5",
+    "require": 2000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "false"
+  },
+  {
+    "id": 13,
+    "name": "Item 6",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1474&q=80",
+    "aquired": "",
+    "price": 1,
+    "isUnlocked": "false"
+  }
+]

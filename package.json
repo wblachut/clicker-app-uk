@@ -1,20 +1,23 @@
 {
-  "name": "react",
+  "name": "clicker-app-uk",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "@babel/runtime": "7.13.8",
     "@fortawesome/fontawesome-svg-core": "1.2.34",
+    "@fortawesome/free-brands-svg-icons": "5.15.2",
     "@fortawesome/free-solid-svg-icons": "5.15.2",
+    "@fortawesome/react-fontawesome": "0.1.14",
+    "materialize-css": "1.0.0",
+    "node-sass": "5.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-redux": "7.2.2",
     "react-router-dom": "5.2.0",
-    "react-scripts": "4.0.0"
+    "react-scripts": "4.0.0",
+    "redux": "4.0.5"
   },
   "devDependencies": {
     "typescript": "4.1.3"
