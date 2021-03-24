@@ -1,11 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faStore, faTrophy } from "@fortawesome/free-solid-svg-icons";
-import { connect } from "react-redux";
-// import { incrementCount, lvlUp } from "../redux/actions";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import leaf from "../icons/maple-leaf.svg";
-// import pine from "../icons/pine-white.svg";
 // import { github } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
@@ -13,12 +11,12 @@ const Navbar = (props) => {
     <div className="navbar-fixed">
       <nav className="nav-wrapper teal darken-4 row">
         <Link to="/" className="logo col s4 m2">
-          Tree Planter{" "}
+          PlanTree{" "}
         </Link>
         <ul id="nav-mobile" className="right">
-          <li className="golden-leaf hide-on-small-only">
+          <li className="golden-leaf valign-wrapper">
+              <span className="nav-gold-count bold"> {props.gold} </span>
             <img className="nav-icon" src={leaf} alt="golden-leaf" />
-              <span className="nav-gold-count"> {props.gols} </span>
           </li>
           <li>
             <Link to="/clicker-app-uk/">

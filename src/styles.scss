@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  touch-action: manipulation;
 }
 
 .nav-txt {
@@ -21,6 +22,9 @@
   width: 100%;
   background-image: linear-gradient(180deg, #002c11e3 0%, #002c1600 80%);
   font-size: 1.2rem;
+  -webkit-user-select: none;       
+  -moz-user-select: none;
+  -ms-user-select: none;
 
   // .counter-wrapper {
   // }
@@ -35,6 +39,14 @@
     margin-top: -15px;
     font-size: 1.1rem
   }
+
+  .stats p {
+    margin: 5px;
+  }
+
+  .clicker-img {
+    width: calc(30px + 10vmin);
+    }
 }
 
 .tree-icon {
@@ -43,48 +55,77 @@ width: 13px;
 
 .nav-icon {
   width: 20px;
-  padding-top: 22px;
+  margin: 10px;
 }
 
-.click-icon {
-width: calc(30px + 10vmin);
-}
 
-.shop-container {
-
-  .item-main {
+  .item-main, .achivmt-name {
     margin: 10px
   }
 
-}
 
   .item-img, .achivmt-img  {
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    // height: 60px;
+    // width: 60px;
     min-height: 60px;
     min-width: 60px;
-    border: 4px solid #ADE194;
     border: 4px solid #80D261;
+    border: 4px solid #004D40;
+    border: 3px solid #ffffff;
     border-radius: 150px;
+    z-index: 1;
   }
 
+  .achivmt-img  {
+    height: 60px;
+    width: 60px;
+  }
 
+.shop-container {
 
+  .shop-item {
+    overflow: hidden;
+    // margin-right: 10px; 
+
+    .item-main {
+      width: 100%;
+    }
+
+    .item-locked, .item-available, .item-owned {
+      position: absolute;
+      left: -75px;
+      width: 150px;
+      height: 150px;
+      z-index: 2;
+
+      i {
+        margin-left: 95px;
+      }
+
+    }
+
+    .item-available, .item-owned {
+      z-index: 0;
+    }
+        .item-img {
+          margin-left: -5px;
+        //  left: -35px;
+        //   width: 100px;
+        //   height: 100px;
+        //   background-size: cover;
+        }
+  }
+}
 
 
 @media (min-width: 600px) {
   .home-container, .shop-container, .achieve-container {
-    // display: flex;
-    // flex: 7;
-    // min-height: 100vh; 
     width: 70%;
     justify-self: center;
   }
 
   .clicker-box-wrapper {
-    // display: flex;
-    // flex: 3;
     position: fixed;
     width: 30%;
     min-height: 100vh; 

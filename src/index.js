@@ -12,8 +12,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, fas, faTrash);
 
-console.log(store.count);
-
+// console.log(store.getState())
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

@@ -4,45 +4,45 @@
     "name": "First Tree Ever!",
     "require": 1,
     "description": "Congratulations!! You've just planted your 1st tree.",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "image": "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "type": "count",
+    "isUnlocked": true
   },
   {
     "id": 2,
     "name": "100 Trees milestone!",
     "require": 100,
     "description": "Congratulations!! You've just planted your 1st tree.",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "image": "https://149362355.v2.pressablecdn.com/wp-content/uploads/Christmas_tree_farm_IA-1140-980x460.png",
+    "type": "count",
+    "isUnlocked": true
   },
   {
     "id": 3,
     "name": "Helping Hand",
     "require": 500,
     "description": "Congratulations!! You've just hired your 1st helper.",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "image": "https://www.globalvillagespace.com/wp-content/uploads/2019/08/Hamdard-Pakistan-launches-Tree-Plantation-Drive-to-Raise-Awareness-on-Climate-Change.jpg",
+    "type": "planters",
+    "isUnlocked": true
   },
   {
     "id": 4,
     "name": "Next Achievement!",
     "require": 1000,
     "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "image": "https://images.pexels.com/photos/1414535/pexels-photo-1414535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "type": "planters",
+    "isUnlocked": true
   },
   {
     "id": 5,
     "name": "Next Achievement!",
     "require": 2000,
     "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
+    "type": "itemsCount",
+    "isUnlocked": true
   },
   {
     "id": 6,
@@ -50,7 +50,61 @@
     "require": 5000,
     "description": "Congratulations!! You've reached new Achievement!!",
     "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "aquired": "",
-    "isUnlocked": "true"
+    "type": "itemsCount",
+    "isUnlocked": true
+  },
+  {
+    "id": 7,
+    "name": "100 Trees milestone!",
+    "require": 100,
+    "description": "Congratulations!! You've just planted your 1st tree.",
+    "image": "https://149362355.v2.pressablecdn.com/wp-content/uploads/Christmas_tree_farm_IA-1140-980x460.png",
+    "type": "count",
+    "isUnlocked": true
+  },
+  {
+    "id": 8,
+    "name": "Helping Hand",
+    "require": 500,
+    "description": "Congratulations!! You've just hired your 1st helper.",
+    "image": "https://www.globalvillagespace.com/wp-content/uploads/2019/08/Hamdard-Pakistan-launches-Tree-Plantation-Drive-to-Raise-Awareness-on-Climate-Change.jpg",
+    "type": "count",
+    "isUnlocked": false
+  },
+  {
+    "id": 9,
+    "name": "Next Achievement!",
+    "require": 1000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.pexels.com/photos/1414535/pexels-photo-1414535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "type": "treesPerSec",
+    "isUnlocked": false
+  },
+  {
+    "id": 10,
+    "name": "Next Achievement!",
+    "require": 2000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
+    "type": "treesPerSec",
+    "isUnlocked": false
+  },
+  {
+    "id": 11,
+    "name": "Next Achievement!",
+    "require": 5000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "type": "goldTotal",
+    "isUnlocked": false
+  },
+  {
+    "id": 12,
+    "name": "Next Achievement!",
+    "require": 5000,
+    "description": "Congratulations!! You've reached new Achievement!!",
+    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "type": "goldTotal",
+    "isUnlocked": false
   }
 ]

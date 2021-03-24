@@ -36,6 +36,7 @@ const treeIcons = [
   cherry,
   jacaranda
 ];
+
 const extraTreeIcons = [pine, palm, liana, willow, aspen, cherry, jacaranda];
 const icons = [leaf, pineWhite];
 

@@ -1,84 +1,92 @@
 import React from "react";
 import { connect } from "react-redux";
-import { incrementCount, lvlUp } from "../redux/actions";
+import {
+  incrementCount,
+  addGold,
+  lvlUp,
+  addAchievement
+} from "../redux/actions";
 import { treeIcons } from "../JSON/tree-icons";
-import Stats from './Stats'
+import Materialize from "materialize-css";
 
 const Clicker = (props) => {
-  const { count, multiplier, lvl, incrementCount, lvlUp } = props;
+  const {
+    count,
+    factor,
+    lvl,
+    onIncrementCount,
+    onLvlUp,
+    onAddGold,
+    treesPerSec,
+  } = props;
   const onBtnClick = () => {
-    incrementCount();
+    onIncrementCount(factor);
     handleLvlUp(count);
+    handleAchievements();
+    // console.log(props);
   };
 
   const handleLvlUp = (count) => {
     const treshold = 10 * 2 ** (lvl - 1);
     if (count >= treshold - 1) {
-      lvlUp(lvl);
+      onLvlUp(lvl);
       console.log("lvl UP to:", lvl + 1);
+      onAddGold();
+      Materialize.toast("Level up!", 4000, "rounded");
+      // Materialize.toast('<span class="white-text">I am toast content</span>', 2000) // 4000 is the duration of the toast
     }
+  };
+
+  const handleAutoClisker = (treesPerSec) => {
+    if (treesPerSec === 0) 
+    setTimeout(() => {
+      onIncrementCount(treesPerSec);
+      // handleAutoClisker(treesPerSec)
+    }, 5000);
+    
+  };
+
+  const handleAchievements = () => {
+    // console.log('Achevement Check');
+    // achievmt.some(achievmt => !achievmt.isUnlocked {
+    // let type = achievmt.type
+    // achievmt.required >= props[type] ? achievmt.isUnlocked = "true"
+    // onAddGold();
+    // forEach achievmt => achievmt.isUnlocked ? addAchievement();
+    // })
   };
 
   return (
-    <div className="clicker-box-wrapper">
-      <section className="clicker-box left fixed white-text">
-        <div className="counter-wrapper">
-          <p className="counter-title txt">
-            Trees Planted: <br />
-            <span className="trees-counter"> {props.count} </span>
-          </p>
-          <button
-          // pulse
-            className="click-btn circle btn-floating white waves-effect waves-dark"
-            onClick={onBtnClick}>
-            <img
-              alt="click-tree-icon"
-              className="click-icon"
-              src={treeIcons[lvl - 1]}
-            />
-          </button>
-          <p>
-            <span className="lvl-txt ">Lvl.</span>
-            <span className="trees-counter"> {props.lvl} </span>
-          </p>
-          <p className="trees-per-click"> trees planted per click: {multiplier}</p>
-        </div>
-        <div className="others-wrapper hide-on-small-only">
-          <Stats />
-          {/* <hr className="white" />
-          <p className="stats left">
-            <p className="trees-counter">Total trees: {props.count} </p>
-            <p className="trees-counter">Total clicks:  </p>
-            <p className="trees-counter">Trees per s: </p>
-            <p className="trees-counter">Workforce hired: </p>
-            <p className="trees-counter">Items unlocked: </p>
-            <p className="trees-counter">Achievements unlocked: </p>
-            <p className="trees-counter">Tree lvl: </p>
-            <p className="trees-counter">Golden leaves earned: </p>
-          </p> */}
-        </div>
-      </section>
-    </div>
+    <React.Fragment>
+      <button
+        // pulse
+        className="click-btn circle btn-floating white"
+        onClick={onBtnClick}>
+        <img
+          alt="click-tree-icon"
+          className="clicker-img"
+          src={treeIcons[lvl - 1] || treeIcons[ - 1]}
+        />
+      </button>
+    </React.Fragment>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    count: state.count,
-    lvl: state.lvl,
-    multiplier: state.multiplier
-  };
-};
+const mapStateToProps = (state) => ({
+  count: state.count,
+  clicks: state.clicks,
+  lvl: state.lvl,
+  gold: state.gold,
+  factor: state.factor,
+  treesPerSec: state.treesPerSec,
+  achievements: state.achievements
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    incrementCount: (mulitplier) => {
-      dispatch(incrementCount(mulitplier));
-    },
-    lvlUp: (lvl) => {
-      dispatch(lvlUp(lvl));
-    }
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  onIncrementCount: (factor) => dispatch(incrementCount(factor)),
+  onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
+  onAddGold: () => dispatch(addGold()),
+  onAddAchievement: () => dispatch(addAchievement())
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Clicker);

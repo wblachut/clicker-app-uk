@@ -10,10 +10,22 @@ const Home = () => {
         Trees Planted: <br />
         <span className="trees-counter"> {} </span>
       </p>
+      <p className="counter-title txt">
+        Helpers: <br />
+        <span className="trees-counter"> {} </span>
+      </p>
+      <p className="counter-title txt">
+        Planters: <br />
+        <span className="trees-counter"> {} </span>
+      </p>
+      <p className="counter-title txt">
+        Trees: <br />
+        <span className="trees-counter"> {} </span>
+      </p>
       {/* <blockquote className="teal">
       This is an example quotation that uses the blockquote tag.
     </blockquote> */}
-      <button>RESET PROGRESS</button>
+      <button className="waves-effect waves-light btn" >RESET PROGRESS</button>
       <div>
         Icons made by{" "}
         <a href="https://www.freepik.com" title="Freepik">

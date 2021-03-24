@@ -1,5 +1,3 @@
-// import { combineReducers } from 'redux';
-// import { counterReducer, loggedReducer } from './reducers'
 import shopItems from "../JSON/items.json";
 import achivmts from "../JSON/achievements.json";
 import { treeIcons, extraTreeIcons } from "../JSON/tree-icons";
@@ -7,13 +5,14 @@ import { treeIcons, extraTreeIcons } from "../JSON/tree-icons";
 const INITIAL_STATE = {
   count: 0,
   lvl: 1,
-  mulitplier: 1,
+  factor: 1,
   gold: 0,
   planters: 0,
   clicks: 0,
   goldTotal: 0,
   achieveCount: 0,
   treesPerSec: 0,
+  itemsCount: 0,
   items: [...shopItems],
   achievements: [...achivmts],
   treeIcons: [...treeIcons],
@@ -26,10 +25,10 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "INCREMENT_COUNT":
       return {
         ...state,
-        count: state.count + 1
+        count: state.count + action.payload.factor,
+        clicks: state.clicks + 1
       };
     case "LVL_UP":
-      console.log("lvl upppp!");
       return {
         ...state,
         lvl: state.lvl + 1
@@ -37,27 +36,38 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "ADD_GOLD":
       return {
         ...state,
-        gold: state.gold + 1
+        gold: state.gold + 1,
+        goldTotal: state.goldTotal + 1
       };
     case "SPEND_GOLD":
       return {
         ...state,
-        gold: state.gold - 1
+        gold: state.gold - action.payload.ammount
       };
-    case "INCREMENT_MULTI":
+    case "INCREMENT_FACTOR":
       return {
         ...state,
-        mulitplier: state.mulitplier + 1
+        factor: state.factor + action.payload.ammount
+      };
+    case "INCREMENT_TPS":
+      return {
+        ...state,
+        treesPerSec: state.treesPerSec + action.payload.ammount
       };
     case "ADD_PLANTER":
       return {
         ...state,
-        planters: state.planters + 1
+        planters: state.planters + action.payload.ammount
       };
     case "ADD_ACHIEVEMENT":
       return {
         ...state,
         achieveCount: state.achieveCount + 1
+      };
+    case "ADD_ITEM":
+      return {
+        ...state,
+        itemsCount: state.itemsCount + 1
       };
     case "CLEAR_PROGRESS":
       return {
@@ -67,10 +77,5 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 };
-
-// const rootReducer = combineReducers({
-// 	counter: counterReducer,
-// 	isLogged: loggedReducer
-// });
 
 export default rootReducer;

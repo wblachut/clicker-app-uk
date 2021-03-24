@@ -5,15 +5,16 @@ const Stats = (props) => {
   return (
     <>
       <section className="stats left">
-        {/* Stats: <br /> */}
-        <p className="trees-counter">Total trees: {props.count} </p>
-        <p className="trees-counter">Total clicks: </p>
-        <p className="trees-counter">Trees per s: </p>
-        <p className="trees-counter">Workforce hired: </p>
-        <p className="trees-counter">Items unlocked: </p>
-        <p className="trees-counter">Achievements unlocked: </p>
-        <p className="trees-counter">Tree lvl: </p>
-        <p className="trees-counter">Golden leaves earned: </p>
+        {/* Stats: */}
+        <p className="stats-counter">Total trees: {props.count} </p>
+        {/* <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am a tooltip">Hover me!</a> */}
+        <p className="stats-counter">Total clicks: {props.clicks}</p>
+        <p className="stats-counter">Trees per s: {props.treesPerSec}</p>
+        <p className="stats-counter">Workforce hired: {props.planters}</p>
+        <p className="stats-counter">Items unlocked: {props.itemsCount}</p>
+        <p className="stats-counter">Achievements unlocked: {props.achieveCount}</p>
+        <p className="stats-counter">Tree lvl: to be implemented</p>
+        <p className="stats-counter">Golden leaves earned: {props.goldTotal}</p>
       </section>
     </>
   );
@@ -29,8 +30,8 @@ const mapStateToProps = (state) => {
     clicks: state.clicks,
     goldTotal: state.goldTotal,
     achieveCount: state.achieveCount,
+    itemsCount: state.itemsCount,
     treesPerSec: state.treesPerSec,
-
   };
 };
 
