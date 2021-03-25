@@ -6,13 +6,11 @@ import "materialize-css/dist/css/materialize.min.css";
 import { Provider } from "react-redux";
 import store from './redux/store';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-library.add(fab, fas, faTrash);
-
-// console.log(store.getState())
+// import { library } from "@fortawesome/fontawesome-svg-core";
+// import { fab } from "@fortawesome/free-brands-svg-icons";
+// import { fas } from "@fortawesome/free-solid-svg-icons";
+// import { faTrash } from "@fortawesome/free-solid-svg-icons";
+// library.add(fab, fas, faTrash);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
