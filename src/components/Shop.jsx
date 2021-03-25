@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { spendGold, lvlUp, addItem, addAchievement, incrementFactor, incrementTPS, incrementPlanters,  } from "../redux/actions";
 
-import items from "../JSON/items.json";
+import items from "../files/items.json";
 import leaf from '../icons/maple-leaf.svg'
 import pine from '../icons/pine-white.svg'
 
@@ -10,11 +10,11 @@ const Shop = (props) => {
 
   const onShopItemClick = item => {
     if (item.isOwned) return
-    // console.log(item.require, item.price, );
     if (item.require > props.count) return
+    if (item.price > props.gold) return
     console.log('cost of the item', item.price);
     handleItemImplementation(item);
-    // props.onSpendGold(item.price);
+    props.onSpendGold(item.price);
     props.onAddItem();
     item.isOwned = true;
   }
@@ -86,7 +86,7 @@ const mapDispatchToProps = (dispatch) => ({
   onIncrementTPS: (ammount) => dispatch(incrementTPS(ammount)),
   onIncrementPlanters: (ammount) => dispatch(incrementPlanters(ammount)),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
-  onSpendGold: () => dispatch(spendGold()),
+  onSpendGold: (ammount) => dispatch(spendGold(ammount)),
   onAddItem: () => dispatch(addItem()),
   onAddAchievement: () => dispatch(addAchievement()),
 });

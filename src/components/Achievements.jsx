@@ -1,21 +1,15 @@
 import React from "react";
-import achivmtsArray from "../JSON/achievements.json";
+import { connect } from "react-redux";
 import pine from '../icons/pine-white.svg'
 
-const achivmts = [...achivmtsArray]
-
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faHome } from "@fortawesome/free-solid-svg-icons";
-
-const Achievements = () => {
+const Achievements = ({ achievements }) => {
   return (
     <div className="achieve-container right row">
       <h5 className="center">Achievements
       </h5>
       <p>here you can find your achievements</p>
       <div className="achivmts-display col m10 offset-m1 row">
-        {achivmts.map((achivmt) => (
+        {achievements.map((achivmt) => (
           (achivmt.isUnlocked &&
           <div className="achivmt row valign-wrapper card left-align" key={achivmt.id}>
             {/* <img src={achivmt.image} alt={achivmt.name} className="circle" /> */}
@@ -39,4 +33,11 @@ const Achievements = () => {
   );
 };
 
-export default Achievements;
+const mapStateToProps = (state) => {
+  return {
+    achievements: state.achievements,
+  };
+};
+
+export default connect(mapStateToProps)(Achievements);
+

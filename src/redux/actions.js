@@ -3,6 +3,10 @@ export const incrementCount = factor => ({
     type: INCREMENT_COUNT,
     payload: { factor },
 });
+export const INCREMENT_CLICKS = 'INCREMENT_CLICKS'
+export const incrementClicks = () => ({
+    type: INCREMENT_CLICKS,
+});
 
 export const INCREMENT_FACTOR = 'INCREMENT_FACTOR'
 export const incrementFactor = ammount => ({
@@ -16,9 +20,9 @@ export const incrementTPS = ammount => ({
     payload: { ammount },
 });
 
-export const INCREMENT_HELPERS = 'INCREMENT_HELPERS'
-export const incrementHelpers = () => ({
-    type: 'INCREMENT_HELPERS',
+export const CHANGE_INTERVAL = 'CHANGE_INTERVAL'
+export const changeInterval = () => ({
+    type: 'CHANGE_INTERVAL',
 });
 
 export const LVL_UP = 'LVL_UP'
@@ -27,9 +31,9 @@ export const lvlUp = () => ({
 });
 
 export const ADD_GOLD = 'ADD_GOLD'
-export const addGold = ammount => ({
+export const addGold = () => ({
     type: ADD_GOLD,
-    payload: { ammount },
+    // payload: { ammount },
 });
 
 export const SPEND_GOLD = 'SPEND_GOLD'

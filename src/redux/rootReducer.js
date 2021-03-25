@@ -1,6 +1,6 @@
-import shopItems from "../JSON/items.json";
-import achivmts from "../JSON/achievements.json";
-import { treeIcons, extraTreeIcons } from "../JSON/tree-icons";
+import shopItems from "../files/items.json";
+import achivmts from "../files/achievements.json";
+import { treeIcons, extraTreeIcons } from "../files/tree-icons";
 
 const INITIAL_STATE = {
   count: 0,
@@ -17,7 +17,6 @@ const INITIAL_STATE = {
   achievements: [...achivmts],
   treeIcons: [...treeIcons],
   extraIcons: [...extraTreeIcons],
-  myExtraIcons: []
 };
 
 const rootReducer = (state = INITIAL_STATE, action) => {
@@ -26,6 +25,10 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         count: state.count + action.payload.factor,
+      };
+    case "INCREMENT_CLICKS":
+      return {
+        ...state,
         clicks: state.clicks + 1
       };
     case "LVL_UP":
@@ -42,22 +45,23 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "SPEND_GOLD":
       return {
         ...state,
-        gold: state.gold - action.payload.ammount
+        gold: state.gold - action.payload.ammount,
       };
     case "INCREMENT_FACTOR":
       return {
         ...state,
-        factor: state.factor + action.payload.ammount
+        factor: state.factor + action.payload.ammount,
       };
     case "INCREMENT_TPS":
       return {
         ...state,
-        treesPerSec: state.treesPerSec + action.payload.ammount
+        treesPerSec: state.treesPerSec + action.payload.ammount,
       };
-    case "ADD_PLANTER":
+    case "CHANGE_INTERVAL":
+      window.claerInterval(state.interval)
       return {
         ...state,
-        planters: state.planters + action.payload.ammount
+        interval: action.payload.interval,
       };
     case "ADD_ACHIEVEMENT":
       return {
