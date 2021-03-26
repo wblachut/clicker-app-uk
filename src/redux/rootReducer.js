@@ -13,9 +13,9 @@ const INITIAL_STATE = {
   achieveCount: 0,
   treesPerSec: 0,
   itemsCount: 0,
-  items: [...shopItems],
-  achievements: [...achivmts],
-  treeIcons: [...treeIcons],
+  items: Object.assign(shopItems),
+  achievements: Object.assign(achivmts),
+  treeIcons:  Object.assign(treeIcons),
   extraIcons: [...extraTreeIcons],
 };
 
@@ -57,26 +57,27 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         ...state,
         treesPerSec: state.treesPerSec + action.payload.ammount,
       };
-    case "CHANGE_INTERVAL":
-      window.claerInterval(state.interval)
-      return {
-        ...state,
-        interval: action.payload.interval,
-      };
+    // case "CHANGE_INTERVAL":
+    //   window.claerInterval(state.interval)
+    //   return {
+    //     ...state,
+    //     interval: action.payload.interval,
+    //   };
     case "ADD_ACHIEVEMENT":
       return {
         ...state,
-        achieveCount: state.achieveCount + 1
+        achieveCount: state.achieveCount + 1,
+        achievements: action.payload.achievements,
       };
     case "ADD_ITEM":
       return {
         ...state,
-        itemsCount: state.itemsCount + 1
+        itemsCount: state.itemsCount + 1,
+        items: action.payload.items,
+
       };
     case "CLEAR_PROGRESS":
-      return {
-        state: INITIAL_STATE
-      };
+      return INITIAL_STATE
     default:
       return state;
   }

@@ -15,7 +15,8 @@ export default function App() {
         <Navbar />
         <ClickerBox />
         <Switch>
-          <Route exact path="/clicker-app-uk/" render={(props) => <Home />} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/clicker-app-uk/" component={Home} />
           <Route exact path="/clicker-app-uk/Shop" component={Shop} />
           <Route
             exact

@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { spendGold, lvlUp, addItem, addAchievement, incrementFactor, incrementTPS, incrementPlanters,  } from "../redux/actions";
+import { spendGold, lvlUp, addItem, addAchievement, incrementFactor, incrementTPS, incrementPlanters  } from "../redux/actions";
 
-import items from "../files/items.json";
 import leaf from '../icons/maple-leaf.svg'
 import pine from '../icons/pine-white.svg'
 
@@ -15,14 +14,14 @@ const Shop = (props) => {
     console.log('cost of the item', item.price);
     handleItemImplementation(item);
     props.onSpendGold(item.price);
-    props.onAddItem();
     item.isOwned = true;
+    props.onAddItem(props.items);
   }
 
   const handleItemImplementation = item => {
     if (item.type === 'count') props.onIncrementFactor(item.add);
     if (item.type === 'treesPerSec') props.onIncrementTPS(item.add);
-    if (item.type === 'tree') handleTreeChange();
+    if (item.type === 'tree') handleTreeChange(item);
   }
 
   const handleTreeChange = item => {
@@ -32,9 +31,9 @@ const Shop = (props) => {
   return (
     <div className="shop-container right row">
       <h5 className="center">Shop</h5>
-      <p>Buy new items to improve planting your trees</p>
-      <div className="items-display col m10 offset-m1 row">
-        {items.map((item) => (
+      <p>Buy new props.items to improve planting your trees</p>
+      <div className="props.items-display col m10 offset-m1 row">
+        {props.items.map((item) => (
           <div 
           className="shop-item col s12 m6 hoverable valign-wrapper card"
           key={item.id}
@@ -46,19 +45,19 @@ const Shop = (props) => {
               }}></div>
             <div className="item-main left-align" >
             <span className="item-name card-title">{item.name} </span>
-            <span className="item-require badge teal darken-4 white-text">{`${item.require} `}
+            <span className="item-require badge teal darken-4 white-text hide-on-small-only">{`${item.require} `}
              <img className="tree-icon" alt="white-pine" src={pine} />
              </span>
             <span className="item-require badge orange darken-3 white-text">{`${item.price} `}
              <img className="tree-icon" alt="golden-leaf" src={leaf}  />
              </span><br/>
-            <span className="item-description">{item.description}</span>
+            <span className="item-description grey-text">{item.description}</span>
             </div>
-            {/* If lvl <= item.require */}
           {(item.require >= props.count + 1) ? (
             <div className="item-locked teal darken-4 circle valign-wrapper">
               <i className="material-icons white-text">lock</i>
-            </div>) : (
+            </div>)
+             : (
             <div className="item-available teal lighten-4 circle valign-wrapper">
             </div>)
           }
@@ -78,6 +77,7 @@ const mapStateToProps = (state) => ({
   gold: state.gold,
   factor: state.factor,
   planters: state.planters,
+  items: state.items,
   treesPerSec: state.treesPerSec,
 });
 
@@ -87,7 +87,7 @@ const mapDispatchToProps = (dispatch) => ({
   onIncrementPlanters: (ammount) => dispatch(incrementPlanters(ammount)),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
   onSpendGold: (ammount) => dispatch(spendGold(ammount)),
-  onAddItem: () => dispatch(addItem()),
+  onAddItem: (items) => dispatch(addItem(items)),
   onAddAchievement: () => dispatch(addAchievement()),
 });
 

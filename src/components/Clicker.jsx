@@ -8,6 +8,7 @@ import {
   addAchievement
 } from "../redux/actions";
 import { treeIcons } from "../files/tree-icons";
+import { dirtyIntervalClear } from "../files/helpers";
 import Materialize from "materialize-css";
 
 const Clicker = (props) => {
@@ -15,16 +16,20 @@ const Clicker = (props) => {
     count,
     factor,
     lvl,
+    treesPerSec,
+    achievements,
+    planters,
+    itemsCount,
+    goldTotal,
     onIncrementCount,
     onIncrementClicks,
     onLvlUp,
     onAddGold,
-    treesPerSec,
-    achievements,
     onAddAchievement
   } = props;
 
   useEffect(() => {
+    if (count === 0) return;
     handleLvlUp(count);
     handleAchievements();
   }, [count]);
@@ -36,8 +41,6 @@ const Clicker = (props) => {
   const onBtnClick = () => {
     onIncrementCount(factor);
     onIncrementClicks();
-    // handleLvlUp(count);
-    // handleAchievements();
   };
 
   const handleLvlUp = (count) => {
@@ -55,43 +58,35 @@ const Clicker = (props) => {
     dirtyIntervalClear();
     // Materialize.Toast.removeAll();
     const TIME_NORMAL = 5000;
-    const timestamp = TIME_NORMAL / treesPerSec
+    const timestamp = TIME_NORMAL / treesPerSec;
     const interval = window.setInterval(() => {
       onIncrementCount(1);
-      // handleLvlUp(count);
-      // handleAchievements();
     }, timestamp);
     return interval;
   }
 
   const handleAchievements = () => {
-    // console.log('Achevement Check', achievements);
-    achievements.forEach(achievmt => {
-      if (achievmt.isUnlocked === true) return
+    if (!achievements) return;
+    achievements.forEach((achievmt) => {
+      if (achievmt.isUnlocked === true) return;
       if (props[achievmt.type] >= achievmt.require) {
         achievmt.isUnlocked = true;
         onAddGold();
-        onAddAchievement();
+        onAddAchievement(achievements);
       }
-    })
-    // let type = achievmt.type
-    //   achievements.find(achievmt => (achievmt.require >= props[achievmt.type]) {
-    //   achievmt.required >= props[type] ? achievmt.isUnlocked = "true"
-    //   onAddGold();
-    // })
+    });
   };
 
-  const dirtyIntervalClear = () => {
-    for (let i = 0; i < 100; i++) {
-      window.clearInterval(i);
-    }
+  const handleClickerIcon = (lvl) => {
+    const clickerIcon = treeIcons[lvl - 1] || treeIcons[-1];
+    return clickerIcon
   };
 
   return (
     <React.Fragment>
       <button
         // pulse
-        className="click-btn circle btn-floating white"
+        className="click-btn circle pulse btn-floating white"
         onClick={onBtnClick}>
         <img
           alt="click-tree-icon"
@@ -108,7 +103,9 @@ const mapStateToProps = (state) => ({
   clicks: state.clicks,
   lvl: state.lvl,
   gold: state.gold,
-  interval: state.interval,
+  planters: state.planters,
+  itemsCount: state.itemsCount,
+  goldTotal: state.goldTotal,
   factor: state.factor,
   treesPerSec: state.treesPerSec,
   achievements: state.achievements
@@ -119,7 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
   onIncrementClicks: () => dispatch(incrementClicks()),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
   onAddGold: () => dispatch(addGold()),
-  onAddAchievement: () => dispatch(addAchievement()),
+  onAddAchievement: (achievements) => dispatch(addAchievement(achievements))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Clicker);

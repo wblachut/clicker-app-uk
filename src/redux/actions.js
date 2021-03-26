@@ -43,13 +43,15 @@ export const spendGold = ammount => ({
 });
 
 export const ADD_ACHIEVEMENT = 'ADD_ACHIEVEMENT'
-export const addAchievement = () => ({
-    type: ADD_ACHIEVEMENT
+export const addAchievement = achievements => ({
+    type: ADD_ACHIEVEMENT,
+    payload: { achievements },
 });
 
 export const ADD_ITEM = 'ADD_ITEM'
-export const addItem = () => ({
-    type: ADD_ITEM
+export const addItem = items => ({
+    type: ADD_ITEM,
+    payload: { items },
 });
 
 export const CLEAR_PROGRESS = 'CLEAR_PROGRESS'

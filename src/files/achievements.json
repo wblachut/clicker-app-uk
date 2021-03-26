@@ -4,7 +4,7 @@
     "name": "First Tree Ever!",
     "require": 1,
     "description": "Congratulations!! You've just planted your 1st tree.",
-    "image": "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "image": "https://cff2.earth.com/uploads/2020/05/07174714/shutterstock_718414630-730x410.jpg",
     "type": "count",
     "isUnlocked": false
   },
@@ -12,98 +12,134 @@
     "id": 2,
     "name": "100 Trees milestone!",
     "require": 100,
-    "description": "Congratulations!! You've just planted your 1st tree.",
-    "image": "https://149362355.v2.pressablecdn.com/wp-content/uploads/Christmas_tree_farm_IA-1140-980x460.png",
+    "description": "Nice, you have planted a cute smallish forest out there",
+    "image": "https://positiveclimatefuture.org/wp-content/uploads/2021/01/kazuend-19SC2oaVZW0-unsplash-1200x800.jpg",
     "type": "count",
     "isUnlocked": false
   },
   {
     "id": 3,
-    "name": "Helping Hand",
-    "require": 500,
-    "description": "Congratulations!! You've just hired your 1st helper.",
-    "image": "https://www.globalvillagespace.com/wp-content/uploads/2019/08/Hamdard-Pakistan-launches-Tree-Plantation-Drive-to-Raise-Awareness-on-Climate-Change.jpg",
-    "type": "planters",
-    "isUnlocked": false
-  },
-  {
-    "id": 4,
-    "name": "Next Achievement!",
-    "require": 1000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.pexels.com/photos/1414535/pexels-photo-1414535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "type": "planters",
-    "isUnlocked": false
-  },
-  {
-    "id": 5,
-    "name": "Next Achievement!",
+    "name": "2000 Trees behind!",
     "require": 2000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
-    "type": "itemsCount",
-    "isUnlocked": false
-  },
-  {
-    "id": 6,
-    "name": "Next Achievement!",
-    "require": 5000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "type": "itemsCount",
-    "isUnlocked": false
-  },
-  {
-    "id": 7,
-    "name": "100 Trees milestone!",
-    "require": 100,
-    "description": "Congratulations!! You've just planted your 1st tree.",
+    "description": "Cool. A nice samll forest now grows on your backyard",
     "image": "https://149362355.v2.pressablecdn.com/wp-content/uploads/Christmas_tree_farm_IA-1140-980x460.png",
     "type": "count",
     "isUnlocked": false
   },
   {
-    "id": 8,
-    "name": "Helping Hand",
-    "require": 500,
-    "description": "Congratulations!! You've just hired your 1st helper.",
-    "image": "https://www.globalvillagespace.com/wp-content/uploads/2019/08/Hamdard-Pakistan-launches-Tree-Plantation-Drive-to-Raise-Awareness-on-Climate-Change.jpg",
+    "id": 4,
+    "name": "Forestation on full throttle",
+    "require": 10000,
+    "description": "Hey, That is a decent forest planted by you",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYiUXjUqFWX3w_5uv1oA7txAA3RD3QLW3GwQ&usqp=CAU",
     "type": "count",
     "isUnlocked": false
   },
   {
+    "id": 5,
+    "name": "Master Planter!",
+    "require": 100000,
+    "description": "Quite nice, What will you do with your forest now?",
+    "image": "https://cache.pakistantoday.com.pk/afforestation.jpg",
+    "type": "count",
+    "isUnlocked": false
+  },
+  {
+    "id": 6,
+    "name": "Planted area of Bialowieza",
+    "require": 60000000,
+    "description": "That's crazy! You planted aproximate ammount of trees as Bialowieza Forests has...",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bialowieza_National_Park_in_Poland0029.JPG/1280px-Bialowieza_National_Park_in_Poland0029.JPG",
+    "type": "count",
+    "isUnlocked": false
+  },
+  {
+    "id": 7,
+    "name": "Helping Hand!",
+    "require": 1,
+    "description": "Congratulations!! You've just hired your 1st helper.",
+    "image": "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "type": "planters",
+    "isUnlocked": false
+  },
+  {
+    "id": 8,
+    "name": "Take that help!",
+    "require": 15,
+    "description": "You have something in yourself to gather all of those planters",
+    "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
+    "type": "planters",
+    "isUnlocked": false
+  },
+  {
     "id": 9,
-    "name": "Next Achievement!",
-    "require": 1000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.pexels.com/photos/1414535/pexels-photo-1414535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "type": "treesPerSec",
+    "name": "Afforestation served...",
+    "require": 100,
+    "description": "Do you even have to click now?",
+    "image": "https://image.freepik.com/free-photo/group-volunteers-planting-new-trees_53876-53316.jpg",
+    "type": "planters",
     "isUnlocked": false
   },
   {
     "id": 10,
-    "name": "Next Achievement!",
-    "require": 2000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
-    "type": "treesPerSec",
+    "name": "Collecting them huh?",
+    "require": 5,
+    "description": "5 items from shop in your pocket!",
+    "image": "https://www.arboretum.ie/wp-content/uploads/2019/10/tools-1024x706.jpg",
+    "type": "itemsCount",
     "isUnlocked": false
   },
   {
     "id": 11,
-    "name": "Next Achievement!",
-    "require": 5000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "type": "goldTotal",
+    "name": "Get them all!",
+    "require": 15,
+    "description": "Wait what? You really bought all of that?",
+    "image": "https://bigtex.com/wp-content/uploads/2018/12/18_BTUF_Blog_GardenTools-1024x682.jpg",
+    "type": "itemsCount",
     "isUnlocked": false
   },
   {
     "id": 12,
-    "name": "Next Achievement!",
+    "name": "100 Clicks",
+    "require": 100,
+    "description": "Acha! Enyoing clicking that button, right?",
+    "image": "https://images.unsplash.com/photo-1568886961933-d635c34531a3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "type": "clicks",
+    "isUnlocked": false
+  },
+  {
+    "id": 13,
+    "name": "Click Monster!",
+    "require": 1000,
+    "description": "You are officialy a clicking beast",
+    "image": "https://30txqa38zb7h2db3bbcpzb1x-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/types-of-tigers.jpg",
+    "type": "clicks",
+    "isUnlocked": false
+  },
+  {
+    "id": 14,
+    "name": "Mouse Lover...",
     "require": 5000,
-    "description": "Congratulations!! You've reached new Achievement!!",
-    "image": "https://images.unsplash.com/photo-1458966480358-a0ac42de0a7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "description": "You really cannot live without that little, small thing",
+    "image": "https://static.dw.com/image/56925261_101.jpg",
+    "type": "clicks",
+    "isUnlocked": false
+  },
+  {
+    "id": 15,
+    "name": "Is it Autumn already?",
+    "require": 15,
+    "description": "You have collected 15 golden leaves of the mapple",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Golden_leaves.jpg",
+    "type": "goldTotal",
+    "isUnlocked": false
+  },
+  {
+    "id": 16,
+    "name": "Golden Leaves everywhere!",
+    "require": 30,
+    "description": "You have collected 30 of those beautifull baubles",
+    "image": "https://elements-video-cover-images-0.imgix.net/files/33916365/0115_GoldenMapleLeaves.jpg?auto=compress&crop=edges&fit=crop&fm=jpeg&h=630&w=1200&s=c4a4dabc5fe0d992216d6aca3c40f1e2",
     "type": "goldTotal",
     "isUnlocked": false
   }
