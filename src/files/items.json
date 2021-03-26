@@ -174,7 +174,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/palm.svg",
     "type": "tree",
-    "price": 5,
+    "price": 10,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/palm.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -186,7 +186,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/willow.svg",
     "type": "tree",
-    "price": 5,
+    "price": 10,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/willow.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -199,7 +199,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/walnut.svg",
     "type": "tree",
-    "price": 5,
+    "price": 10,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/walnut.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -211,7 +211,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/baobab.svg",
     "type": "tree",
-    "price": 5,
+    "price": 10,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/baobab.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -223,7 +223,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/sakura.svg",
     "type": "tree",
-    "price": 5,
+    "price": 15,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/sakura.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -235,7 +235,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/cherry.svg",
     "type": "tree",
-    "price": 5,
+    "price": 15,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/cherry.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -247,7 +247,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/aspen.svg",
     "type": "tree",
-    "price": 5,
+    "price": 15,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/aspen.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -259,7 +259,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/jacaranda.svg",
     "type": "tree",
-    "price": 5,
+    "price": 15,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/jacaranda.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -271,7 +271,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-larch.svg",
     "type": "tree",
-    "price": 5,
+    "price": 20,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-larch.svg",
     "isUnlocked": false,
     "isOwned": false
@@ -283,7 +283,7 @@
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-oak.svg",
     "type": "tree",
-    "price": 5,
+    "price": 20,
     "add": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-oak.svg",
     "isUnlocked": false,
     "isOwned": false
