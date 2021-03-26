@@ -135,6 +135,10 @@ width: 13px;
         margin-left: 95px;
       }
 
+      span {
+        margin-left: 80px;
+      }
+
     }
 
     .item-available, .item-owned {
@@ -205,5 +209,24 @@ width: 13px;
     // margin-left: 100px;
     width: 80px;
     height: 80px;
+  }
+
+  .stats-info {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.719);
+    text-transform: uppercase;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0px 10px;
+    font-size: .9rem;
+  }
+
+  .stats {
+  
+    .stats:hover &
+    .stats-info {
+      visibility: visible;
+    }
   }
 }

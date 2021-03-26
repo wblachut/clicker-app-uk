@@ -7,15 +7,14 @@ const INITIAL_STATE = {
   lvl: 1,
   factor: 1,
   gold: 0,
-  planters: 0,
   clicks: 0,
   goldTotal: 0,
   achieveCount: 0,
   treesPerSec: 0,
   itemsCount: 0,
-  items: Object.assign(shopItems),
-  achievements: Object.assign(achivmts),
-  treeIcons:  Object.assign(treeIcons),
+  items: Object.assign([...shopItems]),
+  achievements: Object.assign([...achivmts]),
+  treeIcons:  Object.assign([...treeIcons]),
   extraIcons: [...extraTreeIcons],
 };
 
@@ -39,8 +38,8 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "ADD_GOLD":
       return {
         ...state,
-        gold: state.gold + 1,
-        goldTotal: state.goldTotal + 1
+        gold: state.gold + action.payload.ammount,
+        goldTotal: state.goldTotal + action.payload.ammount,
       };
     case "SPEND_GOLD":
       return {
@@ -57,12 +56,6 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         ...state,
         treesPerSec: state.treesPerSec + action.payload.ammount,
       };
-    // case "CHANGE_INTERVAL":
-    //   window.claerInterval(state.interval)
-    //   return {
-    //     ...state,
-    //     interval: action.payload.interval,
-    //   };
     case "ADD_ACHIEVEMENT":
       return {
         ...state,
@@ -74,7 +67,12 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         ...state,
         itemsCount: state.itemsCount + 1,
         items: action.payload.items,
-
+      };
+    case "CHANGE_TREE_ICONS":
+      return {
+        ...state,
+        // treeIcons: [...state.treeIcons, action.payload.treeIcon],
+        treeIcons: state.treeIcons.push(action.payload.treeIcon),
       };
     case "CLEAR_PROGRESS":
       return INITIAL_STATE

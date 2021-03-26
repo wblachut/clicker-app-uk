@@ -59,7 +59,7 @@
     "require": 1,
     "description": "Congratulations!! You've just hired your 1st helper.",
     "image": "https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    "type": "planters",
+    "type": "treesPerSec",
     "isUnlocked": false
   },
   {
@@ -68,7 +68,7 @@
     "require": 15,
     "description": "You have something in yourself to gather all of those planters",
     "image": "https://spiderimg.amarujala.com/assets/images/results.amarujala.com/2017/10/03/trees_1507025054.jpeg",
-    "type": "planters",
+    "type": "treesPerSec",
     "isUnlocked": false
   },
   {
@@ -77,7 +77,7 @@
     "require": 100,
     "description": "Do you even have to click now?",
     "image": "https://image.freepik.com/free-photo/group-volunteers-planting-new-trees_53876-53316.jpg",
-    "type": "planters",
+    "type": "treesPerSec",
     "isUnlocked": false
   },
   {

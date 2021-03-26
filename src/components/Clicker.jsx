@@ -7,9 +7,9 @@ import {
   lvlUp,
   addAchievement
 } from "../redux/actions";
-import { treeIcons } from "../files/tree-icons";
+// import { treeIcons } from "../files/tree-icons";
 import { dirtyIntervalClear } from "../files/helpers";
-import Materialize from "materialize-css";
+// import Materialize from "materialize-css";
 
 const Clicker = (props) => {
   const {
@@ -18,9 +18,9 @@ const Clicker = (props) => {
     lvl,
     treesPerSec,
     achievements,
-    planters,
     itemsCount,
     goldTotal,
+    treeIcons,
     onIncrementCount,
     onIncrementClicks,
     onLvlUp,
@@ -48,7 +48,7 @@ const Clicker = (props) => {
     if (count >= treshold - 1) {
       onLvlUp(lvl);
       console.log("lvl UP to:", lvl + 1);
-      onAddGold();
+      onAddGold(Math.floor(lvl / 3));
       // Materialize.toast("Level up!", 4000, "rounded");
     }
   };
@@ -71,27 +71,25 @@ const Clicker = (props) => {
       if (achievmt.isUnlocked === true) return;
       if (props[achievmt.type] >= achievmt.require) {
         achievmt.isUnlocked = true;
-        onAddGold();
+        onAddGold(2);
         onAddAchievement(achievements);
       }
     });
   };
 
   const handleClickerIcon = (lvl) => {
-    const clickerIcon = treeIcons[lvl - 1] || treeIcons[-1];
-    return clickerIcon
+    return treeIcons[lvl - 1] || treeIcons[treeIcons.length - 1];
   };
 
   return (
     <React.Fragment>
       <button
-        // pulse
         className="click-btn circle pulse btn-floating white"
         onClick={onBtnClick}>
         <img
           alt="click-tree-icon"
           className="clicker-img"
-          src={treeIcons[lvl - 1] || treeIcons[-1]}
+          src={handleClickerIcon(lvl)}
         />
       </button>
     </React.Fragment>
@@ -108,14 +106,15 @@ const mapStateToProps = (state) => ({
   goldTotal: state.goldTotal,
   factor: state.factor,
   treesPerSec: state.treesPerSec,
-  achievements: state.achievements
+  achievements: state.achievements,
+  treeIcons: state.treeIcons
 });
 
 const mapDispatchToProps = (dispatch) => ({
   onIncrementCount: (factor) => dispatch(incrementCount(factor)),
   onIncrementClicks: () => dispatch(incrementClicks()),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
-  onAddGold: () => dispatch(addGold()),
+  onAddGold: (ammount) => dispatch(addGold(ammount)),
   onAddAchievement: (achievements) => dispatch(addAchievement(achievements))
 });
 

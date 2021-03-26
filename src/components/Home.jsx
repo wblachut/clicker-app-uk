@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { dirtyIntervalClear } from "../files/helpers";
 import { clearProgress } from "../redux/actions";
 import leaf from "../icons/maple-leaf.svg";
-import Stats from './Stats'
+import Stats from "./Stats";
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -15,8 +15,18 @@ const Home = ({
   items,
   itemsCount,
   achievements,
+  treeIcons,
   onClearProgress
 }) => {
+  const handleDirtyArraysClear = (items, achievements) => {
+    items.forEach((item) => {
+      item.isOwned = false;
+    });
+    achievements.forEach((achmt) => {
+      achmt.isUnlocked = false;
+    });
+  };
+
   return (
     <div className="home-container right row">
       <h5 className="home-title center">Home</h5>
@@ -57,18 +67,27 @@ const Home = ({
             Achievements are unlocked by reaching certain milestones, and can be
             found in achievements tab. You have already unlocked your first
             achievement by planting your first tree!
-          </div><br/>
+          </div>
+          <br />
           <p>
             <b className="teal-text darken-2">Good Luck with planting!</b>
           </p>
         </>
       )}
       {count > 100 && (
-        <p>
-          You have planted {count} trees and reached {lvl}th lvl.
-        </p>
+        <div>
+          <p>
+            You have planted {count} trees and reached {lvl}th lvl.
+          </p>
+          <p>
+            On higher levels you obtain more golden leaves per level.
+          </p>
+          <p>The ammount obtained from unlocking achievement is always 2</p>
+          <p>Every point in workforce generetes 1 tree per 5 seconds.</p>
+          <p>If you want to start anew, pres RESSET PROGRESS button.</p>
+        </div>
       )}
-      {itemsCount > 0 && (
+      {/* {itemsCount > 0 && (
         <>
           <div className="home-items row text">
             {" "}
@@ -94,9 +113,7 @@ const Home = ({
                   item.type === "treesPerSec" && (
                     <p className="center" key="item.id">
                       <div className="item-planters badge orange darken-4 white-text">
-                        <span>
-                        {item.name}
-                        </span>
+                        <span>{item.name}</span>
                       </div>
                     </p>
                   )
@@ -104,13 +121,11 @@ const Home = ({
             </div>
           </div>
         </>
-      )}
-      {/* <blockquote className="teal">
-      This is an example quotation that uses the blockquote tag.
-    </blockquote> */}
+      )} */}
       <button
         className="reset-btn waves-effect waves-light btn"
         onClick={() => {
+          handleDirtyArraysClear(items, achievements);
           dirtyIntervalClear();
           onClearProgress();
         }}>
@@ -137,18 +152,12 @@ const mapStateToProps = (state) => ({
   gold: state.gold,
   achievements: state.achievements,
   items: state.items,
-  itemsCount: state.itemsCount,
+  treeIcons: state.treeIcons,
+  itemsCount: state.itemsCount
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // onAddItem: (items) => dispatch(clearProgress(items)),
   onClearProgress: () => dispatch(clearProgress())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
-
-//  <p> Planters:
-//     {item.type === "treesPerSec" && (<p className="item-planter badge orange darken-4 white-text"> {item.name} </p>)}
-//   </p>
-// {item.isOwned && item.type === "count" && (<span className="item-require badge teal darken-4 white-text"> {item.name} </span>)}
-// {item.type === "treesPerSec" && (<span className="item-require badge orange darken-3 white-text"> {item.name}</span>)}

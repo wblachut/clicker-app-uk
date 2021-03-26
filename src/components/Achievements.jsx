@@ -28,7 +28,7 @@ const Achievements = ({ achievements }) => {
                       />
                     </span>
                   )}
-                  {achivmt.type === "planters" && (
+                  {achivmt.type === "treesPerSec" && (
                     <span className="achivmt-require badge pink darken-4 white-text">
                       {" "}
                       {`${achivmt.require}`}{" "}

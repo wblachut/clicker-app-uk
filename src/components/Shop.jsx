@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { spendGold, lvlUp, addItem, addAchievement, incrementFactor, incrementTPS, incrementPlanters  } from "../redux/actions";
+import { spendGold, lvlUp, addItem, addAchievement, incrementFactor, incrementTPS, incrementPlanters, changeTreeIcons } from "../redux/actions";
 
 import leaf from '../icons/maple-leaf.svg'
 import pine from '../icons/pine-white.svg'
@@ -26,6 +26,7 @@ const Shop = (props) => {
 
   const handleTreeChange = item => {
     console.log(`tree change to: ${item.name} (${item.image})`)
+    props.onChangeTreeIcons(item.add)
   }
 
   return (
@@ -55,7 +56,10 @@ const Shop = (props) => {
             </div>
           {(item.require >= props.count + 1) ? (
             <div className="item-locked teal darken-4 circle valign-wrapper">
-              <i className="material-icons white-text">lock</i>
+              <i className="material-icons white-text hide-on-small-only">lock</i>
+              <span className="item-require  badge teal darken-4 white-text hide-on-med-and-up">{`${item.require} `}
+             <img className="tree-icon" alt="white-pine" src={pine} />
+             </span>
             </div>)
              : (
             <div className="item-available teal lighten-4 circle valign-wrapper">
@@ -79,6 +83,7 @@ const mapStateToProps = (state) => ({
   planters: state.planters,
   items: state.items,
   treesPerSec: state.treesPerSec,
+  treeIcons: state.treeIcons,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -89,6 +94,7 @@ const mapDispatchToProps = (dispatch) => ({
   onSpendGold: (ammount) => dispatch(spendGold(ammount)),
   onAddItem: (items) => dispatch(addItem(items)),
   onAddAchievement: () => dispatch(addAchievement()),
+  onChangeTreeIcons: (treeIcon) => dispatch(changeTreeIcons(treeIcon)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop);

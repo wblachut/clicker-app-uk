@@ -42,7 +42,7 @@
     "description": " + 2 to planting workforce ",
     "image": "https://activejunky.s3.amazonaws.com/images/thefix_upload/AJ2/tentree-2.jpg",
     "type": "treesPerSec",
-    "price": 1,
+    "price": 2,
     "add": 2,
     "isUnlocked": true,
     "isOwned": false
@@ -66,7 +66,7 @@
     "description": " + 10 to planting workforce ",
     "image": "https://treeclicks4.objects.frb.io/blogs/plant-a-tree.jpg",
     "type": "treesPerSec",
-    "price": 2,
+    "price": 3,
     "add": 10,
     "isUnlocked": true,
     "isOwned": false
@@ -90,7 +90,7 @@
     "description": " + 30 to planting workforce ",
     "image": "https://news.panasonic.com/global/stories/assets_c/2013/04/02_PCN_planting-thumb-640xauto-175255.jpg",
     "type": "treesPerSec",
-    "price": 3,
+    "price": 4,
     "add": 30,
     "isUnlocked": true,
     "isOwned": false
@@ -102,7 +102,7 @@
     "description": " + 20 to trees planted per click ",
     "image": "https://i.pinimg.com/originals/5b/e0/f5/5be0f5ae5ff158b1afa6055c34aa946d.jpg",
     "type": "count",
-    "price": 5,
+    "price": 4,
     "add": 20,
     "isUnlocked": false,
     "isOwned": false
@@ -138,7 +138,7 @@
     "description": " + 100 to planting workforce ",
     "image": "https://stmaaprodfwsite.blob.core.windows.net/assets/sites/1/2018/10/1080349-c-Tim-Scrivener.jpg",
     "type": "treesPerSec",
-    "price": 5,
+    "price": 6,
     "add": 100,
     "isUnlocked": false,
     "isOwned": false
@@ -150,7 +150,7 @@
     "description": " + 200 to trees planted per click ",
     "image": "https://i.imgur.com/9kCuPEN.jpg",
     "type": "count",
-    "price": 5,
+    "price": 7,
     "add": 200,
     "isUnlocked": false,
     "isOwned": false
@@ -162,7 +162,7 @@
     "description": " + 200 to planting workforce ",
     "image": "https://i.pinimg.com/originals/6f/bc/94/6fbc9469a90b7889616e9c830d14d974.jpg",
     "type": "treesPerSec",
-    "price": 5,
+    "price": 10,
     "add": 200,
     "isUnlocked": false,
     "isOwned": false
@@ -170,7 +170,7 @@
   {
     "id": 15,
     "name": "Palm tree",
-    "require": 15,
+    "require": 15000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/palm.svg",
     "type": false,
@@ -182,7 +182,7 @@
   {
     "id": 16,
     "name": "Willow",
-    "require": 15,
+    "require": 15000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/willow.svg",
     "type": false,
@@ -195,7 +195,7 @@
   {
     "id": 17,
     "name": "Walnut tree",
-    "require": 15,
+    "require": 15000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/walnut.svg",
     "type": false,
@@ -207,7 +207,7 @@
   {
     "id": 18,
     "name": "Baobab tree",
-    "require": 15,
+    "require": 15000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/baobab.svg",
     "type": false,
@@ -219,7 +219,7 @@
   {
     "id": 19,
     "name": "Sakura tree",
-    "require": 30,
+    "require": 30000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/sakura.svg",
     "type": false,
@@ -231,7 +231,7 @@
   {
     "id": 20,
     "name": "Cherry tree",
-    "require": 30,
+    "require": 30000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/cherry.svg",
     "type": false,
@@ -243,7 +243,7 @@
   {
     "id": 21,
     "name": "Aspen tree",
-    "require": 30,
+    "require": 30000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/aspen.svg",
     "type": false,
@@ -255,7 +255,7 @@
   {
     "id": 22,
     "name": "Jacaranda",
-    "require": 30,
+    "require": 30000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/jacaranda.svg",
     "type": false,
@@ -267,7 +267,7 @@
   {
     "id": 23,
     "name": "Golden Larch",
-    "require": 50,
+    "require": 50000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-larch.svg",
     "type": false,
@@ -279,7 +279,7 @@
   {
     "id": 24,
     "name": "Golden Oak",
-    "require": 50,
+    "require": 50000,
     "description": " upgrades your tree clicker image ",
     "image": "https://codesandbox.io/api/v1/sandboxes/vzced/fs/src/icons/golden-oak.svg",
     "type": false,

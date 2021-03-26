@@ -20,9 +20,10 @@ export const incrementTPS = ammount => ({
     payload: { ammount },
 });
 
-export const CHANGE_INTERVAL = 'CHANGE_INTERVAL'
-export const changeInterval = () => ({
-    type: 'CHANGE_INTERVAL',
+export const CHANGE_TREE_ICONS = 'CHANGE_TREE_ICONS'
+export const changeTreeIcons = treeIcon => ({
+    type: 'CHANGE_TREE_ICONS',
+    payload: { treeIcon },
 });
 
 export const LVL_UP = 'LVL_UP'
@@ -31,9 +32,9 @@ export const lvlUp = () => ({
 });
 
 export const ADD_GOLD = 'ADD_GOLD'
-export const addGold = () => ({
+export const addGold = ammount => ({
     type: ADD_GOLD,
-    // payload: { ammount },
+    payload: { ammount },
 });
 
 export const SPEND_GOLD = 'SPEND_GOLD'

@@ -1,8 +1,9 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './rootReducer.js';
 import { persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const persistConfig = {
   key: 'root',
@@ -12,17 +13,11 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(persistedReducer);
+const store = createStore(persistedReducer, composeWithDevTools(
+  applyMiddleware())
+);
 
 export default store;
 
-
 // const rootReducer = combineReducers(reducers);
-
-// const preloadedState = {
-//   count: 0,
-//   lvl: 1,
-//   mulitplier: 1,
-// };
-
 // export const configureStore = () => createStore(rootReducer, preloadedState);
