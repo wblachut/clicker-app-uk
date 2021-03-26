@@ -1,5 +1,5 @@
-export const dirtyIntervalClear = () => {
-  for (let i = 0; i < 1000; i++) {
+export const dirtyIntervalClear = (ids) => {
+  for (let i = 0; i < ids; i++) {
     window.clearInterval(i);
   }
 };

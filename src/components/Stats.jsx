@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import whiteLeaf from "../icons/maple-white.svg";
 import shovel from "../icons/shovel.svg";
@@ -7,10 +7,6 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 // import $ from 'jquery'
 
 const Stats = (props) => {
-  // useEffect(() => {
-  // document.querySelectorAll(".tooltipped").tooltip({ delay: 50 });
-  // }, []);
-
   // $(document).ready(function(){
   //   $('.tooltipped').tooltip({delay: 50});
   // });
@@ -18,7 +14,6 @@ const Stats = (props) => {
   return (
     <React.Fragment>
       <section className="stats left">
-        {/* <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am a tooltip">Hover me!</a> */}
         {/* data-tooltip="Total Clicks" */}
         {/* data-tooltip="Workforce Hired" */}
         {/* data-tooltip="Items unlocked" */}
@@ -31,32 +26,35 @@ const Stats = (props) => {
             data-delay="50"
             data-tooltip="Total Clicks">
             <i className="material-icons white-text stats-icon"> near_me </i>
-            {props.clicks} <div className="stats-info"> Total Clicks </div>
+            {props.clicks} <span className="stats-info"> Total Clicks </span>
           </p>
         )}
         {props.treesPerSec !== 0 && (
           <p className="stats-counter valign-wrapper">
             <i className="material-icons white-text stats-icon">face</i>{" "}
             {props.treesPerSec}{" "}
-            <div className="stats-info"> Workforce helping </div>
+            <span className="stats-info"> Workforce helping </span>
           </p>
         )}
         {props.itemsCount !== 0 && (
           <p className="stats-counter valign-wrapper">
             <img className="nav-icon" alt="shovel-icon" src={shovel} />{" "}
-            {props.itemsCount} <div className="stats-info">Shop Items purchased</div>
+            {props.itemsCount}{" "}
+            <span className="stats-info">Shop Items purchased</span>
           </p>
         )}
         {props.achieveCount !== 0 && (
           <p className="stats-counter valign-wrapper">
             <FontAwesomeIcon icon={faTrophy} className="stats-icon" />
-            {props.achieveCount} <div className="stats-info"> Achievements Unlocked </div>
+            {props.achieveCount}{" "}
+            <span className="stats-info"> Achievements Unlocked </span>
           </p>
         )}
         {props.goldTotal !== 0 && (
           <p className="stats-counter valign-wrapper">
             <img className="nav-icon" alt="golden-leaf" src={whiteLeaf} />
-            {props.goldTotal} <div className="stats-info"> Golden Leaves gathered</div>
+            {props.goldTotal}{" "}
+            <span className="stats-info"> Golden Leaves gathered</span>
           </p>
         )}
       </section>

@@ -21,9 +21,9 @@ export const incrementTPS = ammount => ({
 });
 
 export const CHANGE_TREE_ICONS = 'CHANGE_TREE_ICONS'
-export const changeTreeIcons = treeIcon => ({
+export const changeTreeIcons = treeIcons => ({
     type: 'CHANGE_TREE_ICONS',
-    payload: { treeIcon },
+    payload: { treeIcons },
 });
 
 export const LVL_UP = 'LVL_UP'

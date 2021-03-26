@@ -11,9 +11,7 @@ import tree9 from "../icons/tree9.svg";
 import tree10 from "../icons/tree10.svg";
 import tree11 from "../icons/tree-great.svg";
 
-// import pine from "../icons/pine.svg";
 import palm from "../icons/palm.svg";
-// import liana from "../icons/liana-tree.svg";
 import willow from "../icons/willow.svg";
 import aspen from "../icons/aspen.svg";
 import cherry from "../icons/cherry.svg";
@@ -22,7 +20,6 @@ import baobab from "../icons/baobab.svg";
 import goldenLarch from "../icons/golden-larch.svg";
 import goldenOak from "../icons/golden-oak.svg";
 import sakura from "../icons/sakura.svg";
-// import wisteria from "../icons/wisteria.svg";
 import walnut from "../icons/walnut.svg";
 
 import leaf from "../icons/maple-leaf.svg";
@@ -57,6 +54,7 @@ const extraTreeIcons = [
   sakura,
   walnut
 ];
+
 const icons = [leaf, pineWhite, mapleWhite, shovel];
 
 export { treeIcons, extraTreeIcons, icons };

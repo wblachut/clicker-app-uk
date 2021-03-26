@@ -1,6 +1,6 @@
 import shopItems from "../files/items.json";
 import achivmts from "../files/achievements.json";
-import { treeIcons, extraTreeIcons } from "../files/tree-icons";
+import { treeIcons } from "../files/tree-icons";
 
 const INITIAL_STATE = {
   count: 0,
@@ -12,10 +12,9 @@ const INITIAL_STATE = {
   achieveCount: 0,
   treesPerSec: 0,
   itemsCount: 0,
-  items: Object.assign([...shopItems]),
-  achievements: Object.assign([...achivmts]),
-  treeIcons:  Object.assign([...treeIcons]),
-  extraIcons: [...extraTreeIcons],
+  items: [...shopItems],
+  achievements: [...achivmts],
+  treeIcons:  [...treeIcons],
 };
 
 const rootReducer = (state = INITIAL_STATE, action) => {
@@ -71,8 +70,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "CHANGE_TREE_ICONS":
       return {
         ...state,
-        // treeIcons: [...state.treeIcons, action.payload.treeIcon],
-        treeIcons: state.treeIcons.push(action.payload.treeIcon),
+        treeIcons: action.payload.treeIcons
       };
     case "CLEAR_PROGRESS":
       return INITIAL_STATE

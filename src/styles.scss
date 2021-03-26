@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500;700&family=Molle:ital@1&display=swap');
+
 .App {
   text-align: center;
   touch-action: manipulation;
@@ -8,8 +10,14 @@
   }
 }
 
-.nav-txt {
-  // font-family: sans-serif;
+.plantree {
+  font-family: 'Mali', cursive;
+  font-size: 1.6rem;
+}
+
+.nav-wrapper a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .home-container {
@@ -174,8 +182,21 @@ width: 13px;
   }
 }
 
+.reset-btn {
+  margin-top: 10vh;
+}
+
 
 @media (min-width: 600px) {
+  .nav-wrapper a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .plantree {
+    font-size: 2.6rem;
+  }
+
   .home-container, .shop-container, .achieve-container {
     width: 70%;
     justify-self: center;
@@ -201,10 +222,6 @@ width: 13px;
     margin-left: 5px;
   }
 
-  .reset-btn {
-    margin-top: 5vh;
-  }
-
   .achivmt-img {
     // margin-left: 100px;
     width: 80px;
@@ -212,21 +229,25 @@ width: 13px;
   }
 
   .stats-info {
-    visibility: hidden;
-    background: rgba(0, 0, 0, 0.719);
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
     text-transform: uppercase;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 5px;
-    margin: 0px 10px;
-    font-size: .9rem;
+    // border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    font-size: .8rem;
+    color: #d4d4d4;
+    font-weight: 600;
+    transform: translateX(120%);
+    transition: all .7s;
   }
 
   .stats {
   
-    .stats:hover &
-    .stats-info {
-      visibility: visible;
+     &:hover .stats-info {
+      opacity: 1;
+      transform: translateX(0%);
     }
   }
 }

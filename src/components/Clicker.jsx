@@ -7,7 +7,6 @@ import {
   lvlUp,
   addAchievement
 } from "../redux/actions";
-// import { treeIcons } from "../files/tree-icons";
 import { dirtyIntervalClear } from "../files/helpers";
 // import Materialize from "materialize-css";
 
@@ -47,7 +46,6 @@ const Clicker = (props) => {
     const treshold = 10 * 2 ** (lvl - 1);
     if (count >= treshold - 1) {
       onLvlUp(lvl);
-      console.log("lvl UP to:", lvl + 1);
       onAddGold(Math.floor(lvl / 3));
       // Materialize.toast("Level up!", 4000, "rounded");
     }
@@ -55,7 +53,7 @@ const Clicker = (props) => {
 
   function handleAutoClisker(treesPerSec) {
     if (treesPerSec === 0) return;
-    dirtyIntervalClear();
+    dirtyIntervalClear(10000);
     // Materialize.Toast.removeAll();
     const TIME_NORMAL = 5000;
     const timestamp = TIME_NORMAL / treesPerSec;

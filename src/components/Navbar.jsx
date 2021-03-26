@@ -4,18 +4,17 @@ import { faHome, faStore, faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import leaf from "../icons/maple-leaf.svg";
-// import { github } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
   return (
     <div className="navbar-fixed">
       <nav className="nav-wrapper teal darken-4 row">
-        <Link to="/" className="logo col s4 m2">
+        <Link to="/" className="plantree logo col s4 m2">
           PlanTree{" "}
         </Link>
-        <ul id="nav-mobile" className="right">
+        <ul className="right">
           <li className="golden-leaf valign-wrapper">
-              <span className="nav-gold-count bold"> {props.gold} </span>
+            <span className="nav-gold-count bold"> {props.gold} </span>
             <img className="nav-icon" src={leaf} alt="golden-leaf" />
           </li>
           <li>
@@ -42,10 +41,9 @@ const Navbar = (props) => {
   );
 };
 
-
 const mapStateToProps = (state) => {
   return {
-    gold: state.gold,
+    gold: state.gold
   };
 };
 
