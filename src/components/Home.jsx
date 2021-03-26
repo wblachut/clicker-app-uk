@@ -52,19 +52,26 @@ const Home = ({
               </p>
               <p>
                 If you plant enought trees you will level up and unlock new
-                content. Your clicker tree will grow up with you.
+                content. The clicker tree will grow up with you as you advance.
                 <span className="hide-on-small-only">
-                  (you can measure your progress by following stats - under the
-                  clicker button)
+                  You can measure your progress by following stats - under the
+                  clicker button.
                 </span>
-                .
+              </p>
+              <p>
+                On higher levels you will be able to purchase helpers, planters
+                and new tree icons in the shop tab. To pay in shop you need
+                golden leaves
+                <img className="text-icon" src={leaf} alt="golden-leaf" />.
               </p>
               <p>
                 {" "}
-                On higher levels you will be able to purchase helpers, planters
-                and new tree icons in the shop tab. To pay in shop you need
-                golden leaves{" "}
-                <img className="text-icon" src={leaf} alt="golden-leaf" />.
+                Following the price you can find require ammount of trees
+                planted to make item purchesabile. Once you click on the shop
+                item and you have enought golden leaves it will turn golden what
+                means it is owned.
+              </p>
+              <p>
                 Golden leves can be obtained by leveling up and reaching new
                 achievements. Achievements are unlocked by reaching certain
                 milestones, and can be found in achievements tab.{" "}
@@ -102,7 +109,7 @@ const Home = ({
           onClick={() => {
             handleDirtyArraysClear(items, achievements);
             dirtyIntervalClear(10000);
-            onChangeTreeIcons(treeIcons.slice(0,10));
+            onChangeTreeIcons(treeIcons.slice(0, 10));
             onClearProgress();
           }}>
           RESET PROGRESS
@@ -135,7 +142,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onChangeTreeIcons: (treeIcon) => dispatch(changeTreeIcons(treeIcon)),
-  onClearProgress: () => dispatch(clearProgress()),
+  onClearProgress: () => dispatch(clearProgress())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
