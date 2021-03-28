@@ -10,6 +10,12 @@ const Achievements = ({ achievements }) => {
       <h5 className="center">Achievements</h5>
       <p>here you can find your achievements</p>
       <div className="achivmts-display col m8 offset-m2 row">
+        {achievements.every((achivmt) => !achivmt.isUnlocked) && (
+          <p>
+            No achievements so far... Plant your first tree and come back here
+            to see your 1st achievement!
+          </p>
+        )}
         {achievements.map(
           (achivmt) =>
             achivmt.isUnlocked && (
@@ -19,8 +25,7 @@ const Achievements = ({ achievements }) => {
                 <div className="achivmt-main col s10 m12">
                   {achivmt.type === "count" && (
                     <span className="achivmt-require badge teal darken-4 white-text">
-                      {" "}
-                      {`${achivmt.require}`}{" "}
+                      {achivmt.require}
                       <img
                         className="achivmt-icon"
                         alt="white-pine"
@@ -30,8 +35,7 @@ const Achievements = ({ achievements }) => {
                   )}
                   {achivmt.type === "treesPerSec" && (
                     <span className="achivmt-require badge pink darken-4 white-text">
-                      {" "}
-                      {`${achivmt.require}`}{" "}
+                      {achivmt.require}
                       <i className="material-icons white-text achivmt-icon ">
                         face
                       </i>
@@ -39,8 +43,7 @@ const Achievements = ({ achievements }) => {
                   )}
                   {achivmt.type === "itemsCount" && (
                     <span className="achivmt-require badge brown darken-2 white-text">
-                      {" "}
-                      {`${achivmt.require}`}{" "}
+                      {achivmt.require}
                       <img
                         className="achivmt-icon"
                         alt="shovel-icon"
@@ -50,8 +53,7 @@ const Achievements = ({ achievements }) => {
                   )}
                   {achivmt.type === "clicks" && (
                     <span className="achivmt-require badge teal lighten-1 white-text">
-                      {" "}
-                      {`${achivmt.require}`}{" "}
+                      {achivmt.require}
                       <i className="material-icons white-text achivmt-icon">
                         near_me
                       </i>
@@ -59,8 +61,7 @@ const Achievements = ({ achievements }) => {
                   )}
                   {achivmt.type === "goldTotal" && (
                     <span className="achivmt-require badge yellow darken-4 white-text">
-                      {" "}
-                      {`${achivmt.require}`}{" "}
+                      {achivmt.require}
                       <img
                         className="achivmt-icon"
                         alt="golden-leaf"

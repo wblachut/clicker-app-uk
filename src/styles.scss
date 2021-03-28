@@ -20,6 +20,10 @@
   padding-right: 10px;
 }
 
+.home-container, .shop-container, .achieve-container {
+  margin-top: 40vh;
+}
+
 .home-container {
   padding: 0px 20px;
   
@@ -45,6 +49,8 @@
   width: 100%;
   height: 40vh;
   font-size: 0.8rem;
+  position: fixed;
+  z-index: 5;
 }
 
 .clicker-box {
@@ -130,6 +136,10 @@ width: 13px;
         font-size: 1.2rem;
         font-weight: 400;
       }
+
+      .item-name, .item-description {
+        margin-left: 5px;
+      }
     }
 
     .item-locked, .item-available, .item-owned {
@@ -154,16 +164,15 @@ width: 13px;
     }
         .item-img {
           margin-left: -5px;
-        //  left: -35px;
-        //   width: 100px;
-        //   height: 100px;
-        //   background-size: cover;
         }
   }
 }
 
 .achieve-container {
-    margin: 5px;
+
+  .achivmts-display {
+    margin: 10px;
+  }
 
   .achivmt-name {
     font-size: 1.2rem;
@@ -200,6 +209,7 @@ width: 13px;
   .home-container, .shop-container, .achieve-container {
     width: 70%;
     justify-self: center;
+    margin: 10px;
   }
 
   .clicker-box-wrapper {

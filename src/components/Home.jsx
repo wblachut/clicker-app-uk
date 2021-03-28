@@ -8,12 +8,12 @@ const Home = ({
   count,
   lvl,
   items,
-  itemsCount,
   achievements,
   treeIcons,
   onClearProgress,
   onChangeTreeIcons
 }) => {
+
   const handleDirtyArraysClear = (items, achievements) => {
     items.forEach((item) => {
       item.isOwned = false;

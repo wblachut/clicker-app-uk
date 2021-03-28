@@ -19,7 +19,6 @@ const Shop = (props) => {
     if (item.isOwned) return;
     if (item.require > props.count) return;
     if (item.price > props.gold) return;
-    console.log("cost of the item", item.price);
     handleItemImplementation(item);
     props.onSpendGold(item.price);
     item.isOwned = true;
@@ -32,15 +31,10 @@ const Shop = (props) => {
     if (item.type === "tree") props.onChangeTreeIcons([...props.treeIcons, item.add]);
   };
 
-  const handleTreeChange = (item) => {
-    console.log(`tree change to: ${item.name} (${item.image})`);
-    props.onChangeTreeIcons(item.add);
-  };
-
   return (
     <div className="shop-container right row">
       <h5 className="center">Shop</h5>
-      <p>Buy new props.items to improve planting your trees</p>
+      <p>Buy new items to improve planting your trees</p>
       <div className="props.items-display col m10 offset-m1 row">
         {props.items.map((item) => (
           <div
