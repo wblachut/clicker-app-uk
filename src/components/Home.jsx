@@ -33,11 +33,7 @@ const Home = ({
             Plant your 1st tree with <b className="teal-text">PlanTree!</b>
             <p>
               {" "}
-              Click the pulsating button with a sapling on it
-              <span className="hide-on-small-only">
-                , the left side of the screen
-              </span>
-              .
+              Click the pulsating button with a sapling on it to plant a tree.
             </p>
           </div>
         )}
