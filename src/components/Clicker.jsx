@@ -8,7 +8,7 @@ import {
   addAchievement
 } from "../redux/actions";
 import { dirtyIntervalClear } from "../files/helpers";
-// import Materialize from "materialize-css";
+import Materialize from "materialize-css";
 
 const Clicker = (props) => {
   const {
@@ -47,7 +47,7 @@ const Clicker = (props) => {
     if (count >= treshold - 1) {
       onLvlUp(lvl);
       onAddGold(Math.floor(lvl / 3));
-      // Materialize.toast("Level up!", 4000, "rounded");
+      Materialize.toast({ html: "Level up!", displayLength: 1000 });
     }
   };
 
@@ -71,6 +71,10 @@ const Clicker = (props) => {
         achievmt.isUnlocked = true;
         onAddGold(2);
         onAddAchievement(achievements);
+        Materialize.toast({
+          html: "New achievement unlocked!",
+          displayLength: 1000
+        });
       }
     });
   };
