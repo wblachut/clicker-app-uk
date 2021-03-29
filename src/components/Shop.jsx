@@ -10,7 +10,6 @@ import {
   incrementPlanters,
   changeTreeIcons
 } from "../redux/actions";
-
 import leaf from "../icons/maple-leaf.svg";
 import pine from "../icons/pine-white.svg";
 

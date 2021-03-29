@@ -4,15 +4,17 @@ import { dirtyIntervalClear } from "../files/helpers";
 import { clearProgress, changeTreeIcons } from "../redux/actions";
 import leaf from "../icons/maple-leaf.svg";
 
-const Home = ({
-  count,
-  lvl,
-  items,
-  achievements,
-  treeIcons,
-  onClearProgress,
-  onChangeTreeIcons
-}) => {
+const Home = (props) => {
+
+  const {
+    count,
+    lvl,
+    items,
+    achievements,
+    treeIcons,
+    onClearProgress,
+    onChangeTreeIcons
+  } = props;
 
   const handleDirtyArraysClear = (items, achievements) => {
     items.forEach((item) => {
