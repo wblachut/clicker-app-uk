@@ -19,6 +19,7 @@ const Stats = (props) => {
         {/* data-tooltip="Items unlocked" */}
         {/* data-tooltip="Achievements unlocked" */}
         {/* data-tooltip="Golden leaves earned" */}
+
         {props.clicks !== 0 && (
           <p
             className="stats-counter tooltipped valign-wrapper"
