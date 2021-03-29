@@ -4,22 +4,12 @@ import whiteLeaf from "../icons/maple-white.svg";
 import shovel from "../icons/shovel.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
-// import $ from 'jquery'
 
 const Stats = (props) => {
-  // $(document).ready(function(){
-  //   $('.tooltipped').tooltip({delay: 50});
-  // });
 
   return (
     <React.Fragment>
       <section className="stats left">
-        {/* data-tooltip="Total Clicks" */}
-        {/* data-tooltip="Workforce Hired" */}
-        {/* data-tooltip="Items unlocked" */}
-        {/* data-tooltip="Achievements unlocked" */}
-        {/* data-tooltip="Golden leaves earned" */}
-
         {props.clicks !== 0 && (
           <p
             className="stats-counter tooltipped valign-wrapper"
