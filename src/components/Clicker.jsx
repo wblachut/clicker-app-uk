@@ -43,8 +43,8 @@ const Clicker = (props) => {
   };
 
   const handleLvlUp = (count) => {
-    const treshold = 10 * 2 ** (lvl - 1);
-    if (count >= treshold) {
+    const threshold = 10 * 2 ** (lvl - 1);
+    if (count >= threshold) {
       onLvlUp(lvl);
       onAddGold(Math.floor(lvl / 3));
       Materialize.toast({ html: "Level up!", displayLength: 1000 });
