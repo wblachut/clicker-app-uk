@@ -7,7 +7,6 @@ import {
   addAchievement,
   incrementFactor,
   incrementTPS,
-  incrementPlanters,
   changeTreeIcons
 } from "../redux/actions";
 import leaf from "../icons/maple-leaf.svg";
@@ -97,7 +96,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   onIncrementFactor: (amount) => dispatch(incrementFactor(amount)),
   onIncrementTPS: (amount) => dispatch(incrementTPS(amount)),
-  onIncrementPlanters: (amount) => dispatch(incrementPlanters(amount)),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
   onSpendGold: (amount) => dispatch(spendGold(amount)),
   onAddItem: (items) => dispatch(addItem(items)),
