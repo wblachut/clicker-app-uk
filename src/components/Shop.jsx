@@ -95,11 +95,11 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onIncrementFactor: (ammount) => dispatch(incrementFactor(ammount)),
-  onIncrementTPS: (ammount) => dispatch(incrementTPS(ammount)),
-  onIncrementPlanters: (ammount) => dispatch(incrementPlanters(ammount)),
+  onIncrementFactor: (amount) => dispatch(incrementFactor(amount)),
+  onIncrementTPS: (amount) => dispatch(incrementTPS(amount)),
+  onIncrementPlanters: (amount) => dispatch(incrementPlanters(amount)),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
-  onSpendGold: (ammount) => dispatch(spendGold(ammount)),
+  onSpendGold: (amount) => dispatch(spendGold(amount)),
   onAddItem: (items) => dispatch(addItem(items)),
   onAddAchievement: () => dispatch(addAchievement()),
   onChangeTreeIcons: (treeIcon) => dispatch(changeTreeIcons(treeIcon))

@@ -32,10 +32,10 @@ export const countReducer = (state = preloadedState, action) => {
 
   switch (type) {
     case INCREMENT_COUNT: {
-      const { ammount } = payload;
+      const { amount } = payload;
       return {
         ...state,
-        count: state.count + ammount,
+        count: state.count + amount,
         clicks: state.clicks++
       };
     }
@@ -61,17 +61,17 @@ export const goldReducer = (state = preloadedState, action) => {
 
   switch (type) {
     case ADD_GOLD: {
-      const { ammount } = payload;
+      const { amount } = payload;
       return {
         ...state,
-        gold: state.gold + ammount
+        gold: state.gold + amount
       };
     }
     case SPEND_GOLD: {
-      const { ammount } = payload;
+      const { amount } = payload;
       return {
         ...state,
-        gold: state.gold - ammount
+        gold: state.gold - amount
       };
     }
     default:
@@ -84,10 +84,10 @@ export const factorReducer = (state = preloadedState, action) => {
 
   switch (type) {
     case INCREMENT_FACTOR: {
-      const { ammount } = payload;
+      const { amount } = payload;
       return {
         ...state,
-        mulitplier: state.mulitplier + ammount
+        mulitplier: state.mulitplier + amount
       };
     }
     default:
@@ -95,12 +95,12 @@ export const factorReducer = (state = preloadedState, action) => {
   }
 };
 
-// export const plantersReducer = (state = INITIAL_STATE, action, ammount) => {
+// export const plantersReducer = (state = INITIAL_STATE, action, amount) => {
 //   switch (action.type) {
 //     case ADD_PLANTER:
 //       return {
 //         ...state,
-//         planters: state.planters + ammount
+//         planters: state.planters + amount
 //       };
 //     default:
 //       return state;

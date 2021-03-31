@@ -37,23 +37,23 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "ADD_GOLD":
       return {
         ...state,
-        gold: state.gold + action.payload.ammount,
-        goldTotal: state.goldTotal + action.payload.ammount,
+        gold: state.gold + action.payload.amount,
+        goldTotal: state.goldTotal + action.payload.amount,
       };
     case "SPEND_GOLD":
       return {
         ...state,
-        gold: state.gold - action.payload.ammount,
+        gold: state.gold - action.payload.amount,
       };
     case "INCREMENT_FACTOR":
       return {
         ...state,
-        factor: state.factor + action.payload.ammount,
+        factor: state.factor + action.payload.amount,
       };
     case "INCREMENT_TPS":
       return {
         ...state,
-        treesPerSec: state.treesPerSec + action.payload.ammount,
+        treesPerSec: state.treesPerSec + action.payload.amount,
       };
     case "ADD_ACHIEVEMENT":
       return {

@@ -9,15 +9,15 @@ export const incrementClicks = () => ({
 });
 
 export const INCREMENT_FACTOR = 'INCREMENT_FACTOR'
-export const incrementFactor = ammount => ({
+export const incrementFactor = amount => ({
     type: INCREMENT_FACTOR,
-    payload: { ammount },
+    payload: { amount },
 });
 
 export const INCREMENT_TPS = 'INCREMENT_TPS'
-export const incrementTPS = ammount => ({
+export const incrementTPS = amount => ({
     type: INCREMENT_TPS,
-    payload: { ammount },
+    payload: { amount },
 });
 
 export const CHANGE_TREE_ICONS = 'CHANGE_TREE_ICONS'
@@ -32,15 +32,15 @@ export const lvlUp = () => ({
 });
 
 export const ADD_GOLD = 'ADD_GOLD'
-export const addGold = ammount => ({
+export const addGold = amount => ({
     type: ADD_GOLD,
-    payload: { ammount },
+    payload: { amount },
 });
 
 export const SPEND_GOLD = 'SPEND_GOLD'
-export const spendGold = ammount => ({
+export const spendGold = amount => ({
     type: SPEND_GOLD,
-    payload: { ammount },
+    payload: { amount },
 });
 
 export const ADD_ACHIEVEMENT = 'ADD_ACHIEVEMENT'

@@ -116,7 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
   onIncrementCount: (factor) => dispatch(incrementCount(factor)),
   onIncrementClicks: () => dispatch(incrementClicks()),
   onLvlUp: (lvl) => dispatch(lvlUp(lvl)),
-  onAddGold: (ammount) => dispatch(addGold(ammount)),
+  onAddGold: (amount) => dispatch(addGold(amount)),
   onAddAchievement: (achievements) => dispatch(addAchievement(achievements))
 });
 

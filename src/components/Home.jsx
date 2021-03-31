@@ -64,7 +64,7 @@ const Home = (props) => {
               </p>
               <p>
                 {" "}
-                Following the price you can find require ammount of trees
+                Following the price you can find require amount of trees
                 planted to make item purchesabile. Once you click on the shop
                 item and you have enought golden leaves it will turn golden what
                 means it is owned.
