@@ -4,7 +4,6 @@ import Stats from "./Stats";
 import Clicker from "./Clicker";
 
 const ClickerBox = (props) => {
-
   return (
     <div className="clicker-box-wrapper">
       <section className="clicker-box left fixed white-text">

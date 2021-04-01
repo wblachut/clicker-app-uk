@@ -8,7 +8,7 @@ import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Achievements from "./components/Achievements";
 
-export default function App() {
+export default function App(props) {
   return (
     <BrowserRouter>
       <div className="App">

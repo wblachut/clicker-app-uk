@@ -20,7 +20,7 @@ const Shop = (props) => {
     handleItemImplementation(item);
     props.onSpendGold(item.price);
     item.isOwned = true;
-    props.onAddItem(props.items);
+    props.onAddItem([...props.items]);
   };
 
   const handleItemImplementation = (item) => {

@@ -8,7 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 const persistConfig = {
   key: 'root',
   storage,
-  stateReconcler: autoMergeLevel2,
+  stateReconciler: autoMergeLevel2,
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

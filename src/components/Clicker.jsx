@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {
   incrementCount,
@@ -17,15 +17,15 @@ const Clicker = (props) => {
     lvl,
     treesPerSec,
     achievements,
-    itemsCount,
-    goldTotal,
     treeIcons,
     onIncrementCount,
     onIncrementClicks,
     onLvlUp,
     onAddGold,
-    onAddAchievement
+    onAddAchievement,
   } = props;
+
+  const [interval, setInterval] = useState(null)
 
   useEffect(() => {
     if (count === 0) return;
@@ -35,6 +35,7 @@ const Clicker = (props) => {
 
   useEffect(() => {
     handleAutoClisker(treesPerSec);
+    console.log('handleClicker');
   }, [treesPerSec]);
 
   const onBtnClick = () => {
@@ -53,14 +54,13 @@ const Clicker = (props) => {
 
   function handleAutoClisker(treesPerSec) {
     if (treesPerSec === 0) return;
-    dirtyIntervalClear(10000);
-    // Materialize.Toast.removeAll();
+    if (interval) clearInterval(interval);
     const TIME_NORMAL = 5000;
     const timestamp = TIME_NORMAL / treesPerSec;
-    const interval = window.setInterval(() => {
+    const newInterval = window.setInterval(() => {
       onIncrementCount(1);
     }, timestamp);
-    return interval;
+    setInterval(newInterval);
   }
 
   const handleAchievements = () => {
