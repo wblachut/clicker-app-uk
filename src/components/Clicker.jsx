@@ -7,7 +7,6 @@ import {
   lvlUp,
   addAchievement
 } from "../redux/actions";
-import { dirtyIntervalClear } from "../files/helpers";
 import Materialize from "materialize-css";
 
 const Clicker = (props) => {
@@ -66,7 +65,7 @@ const Clicker = (props) => {
   const handleAchievements = () => {
     if (!achievements) return;
     achievements.forEach((achievmt) => {
-      if (achievmt.isUnlocked === true) return;
+      if (achievmt.isUnlocked) return;
       if (props[achievmt.type] >= achievmt.require) {
         achievmt.isUnlocked = true;
         onAddGold(2);
