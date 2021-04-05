@@ -9,8 +9,8 @@ import {
   CLEAR_PROGRESS
 } from "./actions";
 
-import shopItems from '../JSON/items.json';
-import achivmts from '../JSON/achievements.json';
+import shopItems from "../utils/json/items.json";
+import achivmts from "../utils/json/achievements.json";
 
 
 const preloadedState = {

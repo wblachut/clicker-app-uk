@@ -1,0 +1,31 @@
+.stats p {
+  margin: 10px 15px 5px 15px;
+}
+
+.stats-icon {
+  width: 20px;
+  margin: 8px 10px 8px 10px;
+}
+
+@media (min-width: 600px) {
+  .stats-info {
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-left: 20px;
+    font-size: .8rem;
+    color: #d4d4d4;
+    font-weight: 600;
+    transform: translateX(120%);
+    transition: all .7s;
+  }
+
+  .stats {
+     &:hover .stats-info {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+}

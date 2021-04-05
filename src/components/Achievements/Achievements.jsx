@@ -1,8 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import pine from "../icons/pine-white.svg";
-import whiteLeaf from "../icons/maple-white.svg";
-import shovel from "../icons/shovel.svg";
+import pine from "../../utils/icons/pine-white.svg";
+import whiteLeaf from "../../utils/icons/maple-white.svg";
+import shovel from "../../utils/icons/shovel.svg";
+import './Achievements.scss'
 
 const Achievements = ({ achievements }) => {
   return (

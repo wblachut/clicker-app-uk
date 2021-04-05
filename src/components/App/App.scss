@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@500;700&family=Molle:ital@1&display=swap');
+
+.App {
+  text-align: center;
+  touch-action: manipulation;
+  
+  ::selection {
+    background: teal;
+    color:white;
+  }
+
+  .tree-icon {
+  width: 13px;
+  }
+}

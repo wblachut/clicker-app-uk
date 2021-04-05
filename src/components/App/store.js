@@ -18,6 +18,3 @@ const store = createStore(persistedReducer, composeWithDevTools(
 );
 
 export default store;
-
-// const rootReducer = combineReducers(reducers);
-// export const configureStore = () => createStore(rootReducer, preloadedState);

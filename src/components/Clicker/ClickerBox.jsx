@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import Stats from "./Stats";
+import Stats from "../Stats/Stats";
 import Clicker from "./Clicker";
+import PropTypes from "prop-types";
 
 const ClickerBox = (props) => {
   return (
@@ -22,7 +23,7 @@ const ClickerBox = (props) => {
             trees planted per click: {props.factor}
           </p>
         </div>
-        <div className="others-wrapper hide-on-small-only">
+        <div className="stats-wrapper hide-on-small-only">
           <hr />
           <Stats />
         </div>
@@ -40,3 +41,9 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(ClickerBox);
+
+ClickerBox.prototype = {
+  count: PropTypes.number.isRequired,
+  lvl: PropTypes.number.isRequired,
+  factor: PropTypes.number.isRequired,
+};

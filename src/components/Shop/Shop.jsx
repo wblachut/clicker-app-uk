@@ -8,9 +8,10 @@ import {
   incrementFactor,
   incrementTPS,
   changeTreeIcons
-} from "../redux/actions";
-import leaf from "../icons/maple-leaf.svg";
-import pine from "../icons/pine-white.svg";
+} from "../App/actions";
+import leaf from "../../utils/icons/maple-leaf.svg";
+import pine from "../../utils/icons/pine-white.svg";
+import './Shop.scss'
 
 const Shop = (props) => {
   const onShopItemClick = (item) => {

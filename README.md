@@ -12,7 +12,7 @@ The web app is based on existing [cookie clicker application](http://orteil.dash
 
 Main aim of this project was to create clicker app with [React](https://reactjs.org/). The instructions was to make an application build of main `App` component containing: `Clicker Button` component alongside with `Home`, `Shop` and `Achievements` components accessible from navbar. Moreover, app should be responsive to mobile devices.
 
-I have decided to use [Redux](https://react-redux.js.org/) in the project to learn it's abilities of managing state in React. All the js files related to redux can be found in `redux` folder. **Actions**, **reducers** and **store** logics are placed in `actions.js`, `rootReducer.js` and `store.js` respectively. App keeps it's state in localStorage thanks to `redux-persist` library. To allow redux accessibility to app, `App` component is wrapped by `Provider` and `PersistGate`.
+I have decided to use [Redux](https://react-redux.js.org/) in the project to learn it's abilities of managing state in React. All the js files related to redux can be found in `components/App` folder. **Actions**, **reducers** and **store** logics are placed in `actions.js`, `rootReducer.js` and `store.js` respectively. App keeps it's state in localStorage thanks to `redux-persist` library. To allow redux accessibility to app, `App` component is wrapped by `Provider` and `PersistGate`.
 
 In styling this app [Sass](https://sass-lang.com/) preprocessor and [Materialize CSS](https://materializecss.com/) framework came handy and timesaving.
 
@@ -24,9 +24,9 @@ If you are not on a mobile device you can check your **stats** under the clicker
 
 In the **Shop** you can purchase _items that increase trees planted by each click_, hire _helpers planting 1 tree for workforce per 5 sec_ or get _upgrades to tree clicker image_. Number of trees next to shop item indicates how many trees are required to unlock it, whereas number of golden leaves tells you how many of them will it cost. It you unlock item you will be able to see it miniature image. Once bought an item will have it's background turned to golden.
 
-The Achievements tab allows you to check your accomplishments. Next to each achievement name you will see number and icon. Number tells you amount required to unlock the achievement and icon tells you of requirement type (eg. trees planted, total clicks or workforce helping).
+The **Achievements** tab allows you to check your accomplishments. Next to each achievement name you will see number and icon. Number tells you amount required to unlock the achievement and icon tells you of requirement type (eg. trees planted, total clicks or workforce helping).
 
-For now the UX of the game is designed so the game takes just few minutes to unlock almost all of the content.
+**For now the UX of the game is designed so the game takes just few minutes to unlock almost all of the content.**
 
 ### Concepts used and learned:
 

@@ -1,9 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import whiteLeaf from "../icons/maple-white.svg";
-import shovel from "../icons/shovel.svg";
+import whiteLeaf from "../../utils/icons/maple-white.svg";
+import shovel from "../../utils/icons/shovel.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
+import './Stats.scss'
 
 const Stats = (props) => {
 

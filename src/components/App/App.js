@@ -1,12 +1,13 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import "./styles.scss";
+import "./App.scss";
 
-import Navbar from "./components/Navbar";
-import ClickerBox from "./components/ClickerBox";
-import Home from "./components/Home";
-import Shop from "./components/Shop";
-import Achievements from "./components/Achievements";
+import Navbar from "../Navbar/Navbar";
+import ClickerBox from "../Clicker/ClickerBox";
+import Home from "../Home/Home";
+import Shop from "../Shop/Shop";
+import Achievements from "../Achievements/Achievements";
+// import Achievements from "./components/Achievements/";
 
 export default function App(props) {
   return (

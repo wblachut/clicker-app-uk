@@ -1,6 +1,6 @@
-import shopItems from "../files/items.json";
-import achivmts from "../files/achievements.json";
-import { treeIcons } from "../files/tree-icons";
+import shopItems from "../../utils/json/items.json";
+import achivmts from "../../utils/json/achievements.json";
+import { treeIcons } from "../../utils/treeIcons";
 
 const INITIAL_STATE = {
   count: 0,

@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { dirtyIntervalClear } from "../files/helpers";
-import { clearProgress, changeTreeIcons } from "../redux/actions";
-import leaf from "../icons/maple-leaf.svg";
+import { dirtyIntervalClear } from "../../utils/helpers";
+import { clearProgress, changeTreeIcons } from "../App/actions";
+import leaf from "../../utils/icons/maple-leaf.svg";
+import "./Home.scss";
 
 const Home = (props) => {
-
   const {
     count,
     lvl,
@@ -64,10 +64,10 @@ const Home = (props) => {
               </p>
               <p>
                 {" "}
-                Following the price you can find require amount of trees
-                planted to make item purchesabile. Once you click on the shop
-                item and you have enought golden leaves it will turn golden what
-                means it is owned.
+                Following the price you can find require amount of trees planted
+                to make item purchesabile. Once you click on the shop item and
+                you have enought golden leaves it will turn golden what means it
+                is owned.
               </p>
               <p>
                 Golden leves can be obtained by leveling up and reaching new
@@ -97,9 +97,8 @@ const Home = (props) => {
             <p>2. You always obtain 2 leaves from unlocking achievements.</p>
             <p>3. Every point in workforce generetes 1 tree per 5 seconds.</p>
             <p>4. If you want to start anew, pres RESSET PROGRESS button.</p>
-            <p>
-              5. Enjoy yoursef and plant some trees, track progress with stats.
-            </p>
+            <p>5. Track your progress with stats (hidden on mobile device).</p>
+            <p>6. Enjoy yoursef and plant some trees with PlanTree clicker.</p>
           </div>
         )}
         <button

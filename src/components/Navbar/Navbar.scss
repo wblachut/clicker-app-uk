@@ -1,0 +1,25 @@
+.logo {
+  font-family: 'Mali', cursive;
+  font-size: 1.6rem;
+}
+
+.nav-wrapper a {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-icon {
+  width: 20px;
+  margin: 8px 10px 8px 10px;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    font-size: 2.6rem;
+  }
+
+  .nav-wrapper a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,13 @@
+.item-img, .achivmt-img  {
+  background-size: cover;
+  min-height: 60px;
+  min-width: 60px;
+  border: 3px solid #ffffff;
+  border-radius: 150px;
+  z-index: 1;
+}
+
+.achivmt-img  {
+  height: 60px;
+  width: 60px;
+}

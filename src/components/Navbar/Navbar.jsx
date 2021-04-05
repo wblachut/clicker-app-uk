@@ -3,18 +3,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faStore, faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import leaf from "../icons/maple-leaf.svg";
+import leaf from "../../utils/icons/maple-leaf.svg";
+import "./Navbar.scss";
 
-const Navbar = (props) => {
+const Navbar = ({ gold }) => {
   return (
     <div className="navbar-fixed">
       <nav className="nav-wrapper teal darken-4 row">
-        <Link to="/" className="plantree logo col s4 m2">
+        <Link to="/" className="logo col s4 m2">
           PlanTree{" "}
         </Link>
         <ul className="right">
           <li className="golden-leaf valign-wrapper">
-            <span className="nav-gold-count bold"> {props.gold} </span>
+            <span className="nav-gold-count bold"> {gold} </span>
             <img className="nav-icon" src={leaf} alt="golden-leaf" />
           </li>
           <li>
@@ -48,3 +49,7 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Navbar);
+
+Navbar.defaultProps = {
+  gold: 0
+};
