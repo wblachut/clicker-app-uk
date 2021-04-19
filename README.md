@@ -22,7 +22,7 @@ Instead of building application around cookie baking I have decided to make user
 
 If you are not on a mobile device you can check your **stats** under the clicker button. Stats allow you to track your progress during planting the trees. If you are not sure what stats icons mean just hover on them to see the hints.
 
-In the **Shop** you can purchase _items that increase trees planted by each click_, hire _helpers planting 1 tree for workforce per 5 sec_ or get _upgrades to tree clicker image_. Number of trees next to shop item indicates how many trees are required to unlock it, whereas number of golden leaves tells you how many of them will it cost. It you unlock item you will be able to see it miniature image. Once bought an item will have it's background turned to golden.
+In the **Shop** you can purchase _items_ that increase trees planted by each click, hire _helpers_ planting 1 tree for workforce per 5 sec or get _upgrades_ to tree clicker image. Number of trees next to shop item indicates how many trees are required to unlock it, whereas number of golden leaves tells you how many of them will it cost. It you unlock item you will be able to see it miniature image. Once bought an item will have it's background turned to golden.
 
 The **Achievements** tab allows you to check your accomplishments. Next to each achievement name you will see number and icon. Number tells you amount required to unlock the achievement and icon tells you of requirement type (eg. trees planted, total clicks or workforce helping).
 
