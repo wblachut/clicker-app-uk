@@ -1,4 +1,4 @@
-### Plant some 🌳🌴🌲 with [PlanTree Clicker App](https://wblachut.github.io/react-project-battleships/)!
+### Plant some 🌳🌴🌲 with [PlanTree Clicker App](https://codesandbox.io/s/github/wblachut/clicker-app-uk)!
 
 #
 
